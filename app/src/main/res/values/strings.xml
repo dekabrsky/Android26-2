@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
     <string name="article_title">Статья</string>
+    <string name="apple_image_url">https://images.gastronom.ru/8rmaxl9iGj_8F7b4fwAPrU2ST2rka4k-gxGL0cax4-Y/pr:product-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzL2Q1YzNhNTliLWY1MTUtNGZhNC1iYzRmLThjNTlmNGE3OGVkNy5qcGc.webp</string>
+    <string name="epstein_image_url">https://icdn.lenta.ru/images/2026/02/03/17/20260203172414366/square_1280_8bb022a5565ea07e009866b3ffc68820.jpg</string>
 </resources>
