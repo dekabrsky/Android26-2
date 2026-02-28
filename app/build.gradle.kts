@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "ru.urfu.droidpractice1"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "ru.urfu.droidpractice1"
@@ -61,4 +61,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.coil.compose)
+    implementation(libs.coil)
+    implementation(libs.androidx.compose.material.icons.extended)
 }

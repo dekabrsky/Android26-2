@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
     <string name="article_title">Статья</string>
+    <string name="second_article_title">Инженеры Uber «клонировали» своего босса с помощью ИИ. Он не против</string>
+    <string name="second_article_first_paragraph">CEO Uber Дара Хосровшахи рассказал, что инженеры компании втайне от него создали чатбот-копию своего начальника — и используют его для подготовки к совещаниям. Несколько команд построили инструмент под названием Dara AI, который имитирует стиль мышления и вопросы CEO, чтобы \'обкатать\' презентации перед реальной встречей.</string>
+    <string name="second_article_image_description">CEO Uber Дара Хосровшахи</string>
+    <string name="second_article_second_paragraph">Идея проста: к моменту, когда слайды попадают к настоящему CEO, они уже прошли через серию итераций — и ИИ-двойник помогает командам заранее предугадать, где босс попросит данные, а где будет давить на компромиссы.</string>
+    <string name="second_article_third_paragraph">Хосровшахи воспринял новость с любопытством, а не с тревогой: для него это сигнал, что ИИ уже проник в корпоративную культуру Uber снизу вверх.</string>
+    <string name="article_on_read">Прочитано</string>
 </resources>
