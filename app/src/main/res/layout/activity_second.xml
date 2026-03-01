@@ -41,7 +41,7 @@
             android:id="@+id/tvContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Текст второй статьи. Здесь много текста, который показывает, как работает прокрутка. Можно вставить любой контент."
+            android:text="Текст второй статьи."
             android:textSize="16sp"
             android:lineSpacingExtra="4dp"
             android:textAlignment="center"

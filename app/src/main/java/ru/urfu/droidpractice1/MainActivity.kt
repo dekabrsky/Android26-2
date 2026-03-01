@@ -129,9 +129,7 @@ fun ArticleScreen(
         )
 
         Text(
-            text = "Здесь находится текст статьи. Можно сделать несколько абзацев с разными стилями. " +
-                    "Это пример текста, который должен быть достаточно длинным, чтобы протестировать прокрутку. " +
-                    "Используем разные стили: обычный, жирный, курсив и т.д.",
+            text = "Здесь находится текст статьи.",
             style = MaterialTheme.typography.bodyLarge,
             textAlign = TextAlign.Justify,
             modifier = Modifier.padding(vertical = 16.dp)
