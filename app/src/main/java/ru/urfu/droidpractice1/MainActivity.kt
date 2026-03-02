@@ -14,7 +14,6 @@ class MainActivity : ComponentActivity() {
     ) { result ->
         if (result.resultCode == RESULT_OK) {
             val isRead = result.data?.getBooleanExtra("is_read", false) ?: false
-            // Сохраняем в SharedPreferences чтобы состояние сохранялось
             val prefs = getSharedPreferences("app_prefs", MODE_PRIVATE)
             prefs.edit().putBoolean("second_article_read", isRead).apply()
             recreate()
