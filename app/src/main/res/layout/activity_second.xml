@@ -12,7 +12,87 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
+        android:title="Вторая статья"
         android:navigationIcon="@drawable/arrow_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/articleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Горы рядом с Екатеринбургом. Соколиный Камень."
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <ImageView
+                android:id="@+id/articleImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/mountains2"
+                android:scaleType="centerCrop"
+                android:contentDescription="Соколиный камень"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/articleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Скала получила своё название благодаря характерному
+камню на вершине, который напоминает огромную птицу, готовую взлететь.
+Местные скалы тоже образованы выветриванием, но их форма не похожа
+на стопки гранитных плит, как на Чёртовом Городище, — здесь получились
+округлые глыбы. Высота этой уральской скалы небольшая: с отвесной
+стороны от подножья до вершины — около 15–18 м. Наверху — природная
+обзорная площадка, виды с неё открываются красивые.Дорога на Соколиный
+Камень идёт по смешанному лесу, где летом много ягод и грибов.
+С горы можно спуститься к речке Северке, которая течёт среди каменных
+глыб, покрытых мхом. Летом она спокойна, а весной превращается в
+бурный поток. Если вы планируете поход на Соколиный Камень на
+выходные, посетите и другие природные достопримечательности в
+этом районе, например Палкинские каменные палатки. Это тоже останцы,
+рядом с посёлком Палкино. Найдите на них писаницу — рисунок на
+скалах, сделанный охрой предположительно 5000 лет назад.
+Рядом с посёлком Северка находится озеро Песчаное, где можно
+искупаться или даже остановиться с палаткой, в том числе на
+платной закрытой оборудованной территории."
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <Switch
+                    android:id="@+id/readSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Статья прочитана"
+                    android:textSize="18sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
