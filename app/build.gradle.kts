@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "ru.urfu.droidpractice1"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "ru.urfu.droidpractice1"
-        minSdk = 28
-        targetSdk = 34
+        minSdk = 24
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -54,6 +54,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.compose.runtime.saveable)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -61,4 +62,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+        implementation("io.coil-kt:coil-compose:2.7.0")
+        implementation("com.github.bumptech.glide:glide:4.16.0")
+
 }
