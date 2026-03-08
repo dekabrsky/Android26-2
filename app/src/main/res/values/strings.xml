@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
     <string name="article_title">Статья</string>
+    <string name="article1_header">Java: язык, который изменил мир программирования</string>
+    <string name="article1_pretext">Write once, run anywhere</string>
+    <string name="article1_img">https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fs73bjelmcn7cytqlnxnt.jpeg</string>
+    <string name="article1_1">Java — один из самых популярных языков программирования, созданный компанией Sun Microsystems в 1995 году. Его создатель, Джеймс Гослинг, изначально разрабатывал язык для программирования бытовой электроники, но Java быстро завоевала мир корпоративной разработки и веб-приложений.</string>
+    <string name="article1_2">Главная философия Java — «написать один раз, запустить где угодно» (Write Once, Run Anywhere). Это достигается благодаря виртуальной машине Java (JVM), которая позволяет запускать один и тот же код на любой платформе — от смартфонов до суперкомпьютеров.</string>
+    <string name="article1_3">Java — объектно-ориентированный язык с автоматическим управлением памятью. Это делает его более безопасным и менее подверженным ошибкам по сравнению с языками вроде C++. Строгая типизация и богатая стандартная библиотека помогают разработчикам создавать надежные приложения.</string>
+    <string name="article1_4">Сегодня Java используется повсеместно: в Android-приложениях, корпоративных системах, банковском софте, больших данных и облачных технологиях. Несмотря на появление более современных языков, Java остается востребованной благодаря огромной экосистеме, стабильности и миллионам программистов по всему миру.</string>
+    <string name="article2_preview">Язык Kotlin - официальный язык для Android разработки</string>
+    <string name="article2_header">Kotlin: современная эволюция JVM</string>
+    <string name="article2_1">Kotlin — современный язык программирования, представленный компанией JetBrains в 2011 году. Он был создан как более выразительная и безопасная альтернатива Java, полностью совместимая с JVM.</string>
+    <string name="article2_2">Главные преимущества Kotlin — лаконичный синтаксис, null-безопасность на уровне языка и функциональное программирование. Код на Kotlin часто в два раза короче аналогичного на Java, но при этом остается читаемым и безопасным.</string>
+    <string name="article2_3">В 2017 году Google объявил Kotlin официальным языком для разработки Android-приложений, что стало переломным моментом. Сегодня большинство новых Android-приложений пишутся именно на Kotlin.</string>
+    <string name="article2_4">Kotlin также используется для серверной разработки, веб-приложений и даже мультиплатформенных проектов благодаря Kotlin Multiplatform. Этот язык успешно сочетает лучшее от Java с современными возможностями, делая разработку быстрее и приятнее.</string>
+    <string name="article2_img">https://kotlinlang.org/_next/static/chunks/images/hero-cover-6dd34ed75729683235a4f47d714a604e.png</string>
+    <string name="read">Прочитано</string>
 </resources>
