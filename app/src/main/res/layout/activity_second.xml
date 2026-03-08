@@ -15,4 +15,73 @@
         android:title="@string/article_title"
         android:navigationIcon="@drawable/arrow_back" />
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Преступно нажитые миллионы: как разбогател Джеффри Эпштейн?"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/article_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ранние годы, семья, образование"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                android:textColor="@android:color/black" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Джеффри Эпштейн родился 20 января 1953 года в Бруклине. Его родители Полин и Сеймур Эпштейны поженились в 1952 году. Полин была домохозяйкой, а ее супруг — садовником. В 1954 году у пары родился младший сын Марк. Марк Эпштейн изучал в колледже Купер-Юнион искусство, затем основал специализирующуюся на шелкографии компанию Izmo. С 1990-х годов работает в сфере инвестиций в недвижимость, его компании, в частности, принадлежит 16-этажное здание на Манхэттене.
+Джеффри Эпштейн с ранних лет проявлял способности в математике и игре на фортепьяно. Дважды менял школы и в 1969 году, в возрасте 16 лет, окончил Lafayette High School. Поступил в частный колледж Купер-Юнион, но через два года перевелся в Курантовский университет математических наук (подразделение Нью-Йоркского университета). В 1974 году Эпштейн бросил вуз, так и не получив степень бакалавра.
+Несмотря на отсутствие высшего образования, он был принят на работу учителем математики в манхэттенскую школу имени Тони Далтона. Там он преподавал в течение двух лет."
+                android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                android:textColor="@android:color/black" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="14dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Карьера Эпштейна"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                android:textColor="@android:color/black" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Во время работы в школе Далтона Эпштейну удалось завязать знакомство с главой банка Bear Stearns Аланом Гринбергом, который был отцом одного из его учеников. Гринберг посчитал, что у Эпштейна есть способности к работе с финансами и в 1976 году пригласил его в свою компанию. В банке Эпштейн начинал как трейдер, но уже в 1980 году стал одним из партнеров.
+Через год он покинул Bear Stearns, заявив, что хочет заняться собственным проектом. Позже Vanity Fair писало, что его попросили уйти из-за неназванного нарушения. Как писал The Observer, одна из вещей, которую он забрал с собой на память из офиса — вырезка из журнала Cosmopolitan, где он был назвал «холостяком месяца». «Финансовый стратег 27-летний Джеффри Эпштейн общается только с теми, кто зарабатывает больше миллиона в год», — говорилось в заметке.
+Летом 1981 года Эпштейн основал консалтинговую компанию International Assets Group Inc., которая помогала клиентам вернуть украденные средства, и к 1984 году уже стал миллионером.
+В 1988 году он основал компанию J. Epstein &amp; Company (позднее была переименована в The Financial Trust Company), которая предоставляла услуги по управлению капиталом клиентам с состоянием от $1 млрд. Среди деловых партнеров и клиентов Эпштейна в тот период СМИ называют финансиста Стивена Хоффенберга, осужденного позже за создание финансовой пирамиды.
+В течение многих лет Эпштейн был финансовым советником Лесли Векснера (владелец L Brands, куда входит, в частности, Victoria’s Secret) и управлял его фондами. Отстранили его от этой работы только в 2007 году, когда в отношении Эпштейна уже велось расследование. «Мы приняли решение, что он должен отойти от управления нашими финансами, — писал Векснер в обращении к своему фонду. — В процессе мы обнаружили, что он присвоил огромные суммы денег, принадлежавшие мне и моей семье. Это было, честно говоря, чудовищным шоком, хотя он очевидно меркнет на фоне невероятных обвинений, выдвинутых против него сейчас». По словам главы L Brands, часть денег удалось вернуть."
+                android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                android:textColor="@android:color/black" />
+
+            <Switch
+                android:id="@+id/article_read"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Прочитано" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
