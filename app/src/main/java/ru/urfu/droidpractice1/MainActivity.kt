@@ -1,20 +1,30 @@
 package ru.urfu.droidpractice1
 
-import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.runtime.mutableStateOf
 import ru.urfu.droidpractice1.content.MainActivityScreen
 
 class MainActivity : ComponentActivity() {
+    private var articleRead = mutableStateOf(false);
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d("Lifecycle", "MainActivity:onCreate")
+        articleRead.value = savedInstanceState?.getBoolean("article_read", false) ?: false;
+
+        val startArticle = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                articleRead.value = result.data?.getBooleanExtra("article_read", false) ?: false;
+            }
+        }
         setContent {
-            MainActivityScreen()
+            MainActivityScreen(articleRead.value) { intent ->
+                startArticle.launch(intent)
+            }
         }
     }
 
@@ -22,11 +32,6 @@ class MainActivity : ComponentActivity() {
     override fun onStart() {
         super.onStart()
         Log.d("Lifecycle", "MainActivity:onStart")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d("Lifecycle", "MainActivity:onResume")
     }
 
     override fun onPause() {
@@ -52,6 +57,8 @@ class MainActivity : ComponentActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         Log.d("Lifecycle", "MainActivity:onSaveInstanceState")
+
+        outState.putBoolean("article_read", articleRead.value);
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {

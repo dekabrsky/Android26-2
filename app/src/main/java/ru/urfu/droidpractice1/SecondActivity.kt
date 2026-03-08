@@ -1,16 +1,12 @@
 package ru.urfu.droidpractice1
 
-import android.content.Context
 import android.content.SharedPreferences
 import androidx.activity.ComponentActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
-import android.widget.ImageView
-import android.widget.Switch
-import androidx.compose.ui.res.stringResource
 import com.bumptech.glide.Glide
-import com.google.android.material.materialswitch.MaterialSwitch
+import androidx.activity.addCallback
+import android.content.Intent
 import ru.urfu.droidpractice1.databinding.ActivitySecondBinding
 
 class SecondActivity : ComponentActivity() {
@@ -25,18 +21,23 @@ class SecondActivity : ComponentActivity() {
         val view = binding.root
         setContentView(view)
 
+        val articleRead = savedInstanceState?.getBoolean("article_read", false) ?: false ||
+                            intent.getBooleanExtra("article_read", false);
+        val readSwitch = binding.articleRead;
         binding.toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
+        readSwitch.isChecked = articleRead;
 
-        val imageView = findViewById<ImageView>(R.id.article_image)
-        Glide.with(this).load(getString(R.string.epstein_image_url)).into(imageView)
+        onBackPressedDispatcher.addCallback(this) {
+            val intent = Intent().apply {
+                putExtra("article_read", readSwitch.isChecked);
+            }
 
-        prefs = getSharedPreferences("prefs", Context.MODE_PRIVATE)
-        val readSwitch = findViewById<Switch>(R.id.article_read)
-        readSwitch.isChecked = prefs.getBoolean("article_read", false)
-
-        readSwitch.setOnCheckedChangeListener { _, isChecked ->
-            prefs.edit().putBoolean("article_read", isChecked).apply()
+            setResult(RESULT_OK, intent);
+            finish();
         }
+
+        val imageView = binding.articleImage;
+        Glide.with(this).load(getString(R.string.epstein_image_url)).into(imageView)
     }
 
     // Упражнение 1
@@ -73,6 +74,8 @@ class SecondActivity : ComponentActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         Log.d("Lifecycle", "SecondActivity:onSaveInstanceState")
+
+        outState.putBoolean("article_read", binding.articleRead.isChecked);
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
