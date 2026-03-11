@@ -20,16 +20,14 @@ class SecondActivity : ComponentActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        val img = findViewById<ImageView>(R.id.articleImage)
-        img.load(getString(R.string.article2_img))
-        val haveRead = findViewById<Switch>(R.id.switchRead)
-        haveRead.isChecked = intent.getBooleanExtra("isRead", false)
-
-        binding.toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
-
+        binding.articleImage.load(getString(R.string.article2_img))
+        binding.switchRead.isChecked = intent.getBooleanExtra("isRead", false)
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
         onBackPressedDispatcher.addCallback(this) {
             val intent = Intent().apply {
-                putExtra("isRead", haveRead.isChecked)
+                putExtra("isRead", binding.switchRead.isChecked)
             }
             setResult(RESULT_OK, intent)
             finish()

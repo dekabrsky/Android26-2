@@ -18,15 +18,16 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalContentColor
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
@@ -39,11 +40,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import ru.urfu.droidpractice1.R
 import ru.urfu.droidpractice1.SecondActivity
@@ -55,8 +54,6 @@ fun MainActivityScreen(isSecondArticleRead: Boolean, startSecondArticle: (Intent
     val scrollState = rememberScrollState();
 
     val isLikeArticle = rememberSaveable { mutableStateOf<Boolean?>(null) }
-    val countOfLikes = rememberSaveable { mutableIntStateOf(0) }
-    val countOfDislikes = rememberSaveable { mutableIntStateOf(0) }
 
 
     DroidPractice1Theme {
@@ -91,8 +88,7 @@ fun MainActivityScreen(isSecondArticleRead: Boolean, startSecondArticle: (Intent
                 Column() {
                     Text(
                         text = stringResource(R.string.article1_header),
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Bold,
+                        style = MaterialTheme.typography.headlineMedium,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -101,19 +97,10 @@ fun MainActivityScreen(isSecondArticleRead: Boolean, startSecondArticle: (Intent
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         IconButton(onClick = {
-                            if (isLikeArticle.value == null) {
-                                isLikeArticle.value = true
-                                countOfLikes.value++
-                                return@IconButton
-                            }
                             if (isLikeArticle.value == true) {
                                 isLikeArticle.value = null
-                                countOfLikes.value--
-                                return@IconButton
-                            }
-                            isLikeArticle.value = true
-                            countOfLikes.value++
-                            countOfDislikes.value--
+
+                            } else { isLikeArticle.value = true }
                         }) {
                             Icon(
                                 imageVector = Icons.Filled.ThumbUp,
@@ -121,39 +108,19 @@ fun MainActivityScreen(isSecondArticleRead: Boolean, startSecondArticle: (Intent
                                 tint = if (isLikeArticle.value == true) Color.Blue else LocalContentColor.current
                             )
                         }
-                        if (countOfLikes.value != 0) {
-                            Text(
-                                text = countOfLikes.value.toString()
-                            )
-                        }
-
+                        if (isLikeArticle.value == true) { Text(text = "1") }
                         IconButton(onClick = {
-                            if (isLikeArticle.value == null) {
-                                isLikeArticle.value = false
-                                countOfDislikes.value++
-                                return@IconButton
-                            }
                             if (isLikeArticle.value == false) {
                                 isLikeArticle.value = null
-                                countOfDislikes.value--
-                                return@IconButton
-                            }
-                            isLikeArticle.value = false
-                            countOfDislikes.value++
-                            countOfLikes.value--
+                            } else { isLikeArticle.value = false }
                         }) {
                             Icon(
-                                imageVector = Icons.Filled.ThumbUp,
-                                modifier = Modifier.rotate(180f),
+                                imageVector = Icons.Filled.ThumbDown,
                                 contentDescription = "dislike",
                                 tint = if (isLikeArticle.value == false) Color.Blue else LocalContentColor.current
                             )
                         }
-                        if (countOfDislikes.value != 0) {
-                            Text(
-                                text = countOfDislikes.value.toString()
-                            )
-                        }
+                        if (isLikeArticle.value == false) { Text(text = "1") }
                     }
 
                     AsyncImage(
@@ -169,7 +136,7 @@ fun MainActivityScreen(isSecondArticleRead: Boolean, startSecondArticle: (Intent
                             .padding(top = 20.dp)
                             .padding(horizontal = 50.dp)
                             .clip(RoundedCornerShape(20.dp))
-                            .background(color = Color(0xFFA500A5))
+                            .background(color = Color.Green)
                             .padding(vertical = 10.dp)
                     ) {
                         Text(
@@ -208,7 +175,7 @@ fun MainActivityScreen(isSecondArticleRead: Boolean, startSecondArticle: (Intent
                             .padding(top = 20.dp, bottom = 20.dp)
                             .padding(horizontal = 30.dp)
                             .clip(RoundedCornerShape(20.dp))
-                            .background(color = Color(0x762C2750))
+                            .background(color = Color.Green)
                             .padding(10.dp),
                         contentAlignment = Alignment.Center
                     ) {
