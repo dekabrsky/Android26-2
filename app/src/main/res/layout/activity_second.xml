@@ -23,52 +23,50 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="16.dp"
+            android:layout_marginBottom="16dp"
             android:orientation="vertical"
-            android:padding="10.dp">
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:text="@string/article2_header"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:padding="24dp"
-                android:textStyle="bold" />
+                style="@style/TextAppearance.Material3.HeadlineSmall"
+                android:layout_marginTop="16dp"/>
 
             <ImageView
                 android:id="@+id/photo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10.dp"
-                android:justificationMode="inter_word"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/article2"
-                android:textColor="@color/black"
-                android:textSize="17.sp" />
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_marginTop="12dp"
+                android:justificationMode="inter_word"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20.dp"
-                android:layout_marginTop="20.dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Прочитано" />
+                    android:text="Прочитано"
+                    style="@style/TextAppearance.Material3.BodyMedium"/>
 
                 <Switch
                     android:id="@+id/switchRead"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"/>
             </LinearLayout>
 
         </LinearLayout>

@@ -2,16 +2,13 @@
 
 package ru.urfu.droidpractice1.content
 
+import ru.urfu.droidpractice1.MainActivity
+
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
-import androidx.compose.ui.draw.rotate
-import androidx.compose.ui.res.painterResource
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.LargeTopAppBar
-import androidx.compose.material3.MediumTopAppBar
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import android.content.Intent
@@ -26,14 +23,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import ru.urfu.droidpractice1.R
 import ru.urfu.droidpractice1.ui.theme.DroidPractice1Theme
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Share
-//import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -42,12 +36,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import ru.urfu.droidpractice1.SecondActivity
-import ru.urfu.droidpractice1.ui.theme.DroidPractice1Theme
+import androidx.compose.material.icons.filled.ThumbDown
 
 @Composable
 fun MainActivityScreen( isSecondArticleRead: Boolean, startSecondArticle: (Intent) -> Unit) {
@@ -121,7 +114,6 @@ fun MainActivityScreen( isSecondArticleRead: Boolean, startSecondArticle: (Inten
                         .clip(RoundedCornerShape(8.dp))
                 )
 
-                // Добавьте сюда текст статьи, если нужно
                 Spacer(modifier = Modifier.height(16.dp))
 
                 Text(
@@ -149,10 +141,8 @@ fun MainActivityScreen( isSecondArticleRead: Boolean, startSecondArticle: (Inten
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         IconButton(onClick = { dislikes++ }) {
                             Icon(
-                                imageVector = Icons.Filled.ThumbUp,
-                                modifier = Modifier.rotate(180f),
-                                contentDescription = "Дизлайк",
-                                tint = MaterialTheme.colorScheme.onSurface
+                                imageVector = Icons.Filled.ThumbDown,
+                                contentDescription = "Дизлайк"
                             )
                         }
                         Text(
@@ -178,7 +168,7 @@ fun MainActivityScreen( isSecondArticleRead: Boolean, startSecondArticle: (Inten
                         ),
                         onClick = { _ ->
                             val intent = Intent(context, SecondActivity::class.java).apply {
-                                putExtra("isRead", isSecondArticleRead)
+                                putExtra(MainActivity.EXTRA_IS_READ, isSecondArticleRead)
                             }
                             startSecondArticle(intent)
                         }
