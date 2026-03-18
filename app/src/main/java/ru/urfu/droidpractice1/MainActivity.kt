@@ -27,6 +27,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         Log.d("LIFECYCLE", "MainActivity onCreate")
 
+        if (savedInstanceState != null) {
+            isSecondArticleRead = savedInstanceState.getBoolean("article_read", false)
+        }
+
         setContent {
             MainActivityScreen(
                 isSecondArticleRead = isSecondArticleRead,
@@ -36,6 +40,11 @@ class MainActivity : ComponentActivity() {
                 }
             )
         }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putBoolean("article_read", isSecondArticleRead)
     }
 
     override fun onStart() { super.onStart(); Log.d("LIFECYCLE", "MainActivity onStart") }
