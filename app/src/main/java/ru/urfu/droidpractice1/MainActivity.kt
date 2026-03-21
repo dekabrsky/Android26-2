@@ -21,9 +21,22 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 
+object AppColors {
+    val SuccessBackground = Color(0xFFE8F5E9)
+    val SuccessText = Color(0xFF2E7D32)
+    val DislikeButton = Color(0xFFE57373)
+}
+
+object AppDimensions {
+    val PaddingSmall = 8.dp
+    val PaddingMedium = 12.dp
+    val PaddingLarge = 16.dp
+    val PaddingExtraLarge = 24.dp
+    val ImageHeight = 250.dp
+}
+
 class MainActivity : ComponentActivity() {
     private val TAG = "Lifecycle_MainActivity"
-
     private var onReadResult: ((Boolean) -> Unit)? = null
 
     private val secondActivityLauncher = registerForActivityResult(
@@ -40,7 +53,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            // Состояния лайков и дизлайков
+
             var isArticle2Read by rememberSaveable { mutableStateOf(false) }
             var likes by rememberSaveable { mutableIntStateOf(0) }
             var dislikes by rememberSaveable { mutableIntStateOf(0) }
@@ -52,20 +65,22 @@ class MainActivity : ComponentActivity() {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(16.dp)
+                    .padding(AppDimensions.PaddingLarge)
                     .verticalScroll(rememberScrollState())
             ) {
-                // Плашка "Прочитано"
+
                 if (isArticle2Read) {
                     Surface(
-                        color = Color(0xFFE8F5E9),
-                        modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp),
+                        color = AppColors.SuccessBackground,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = AppDimensions.PaddingMedium),
                         shape = MaterialTheme.shapes.small
                     ) {
                         Text(
                             text = "✓ Вы узнали всё про Териберку!",
-                            modifier = Modifier.padding(12.dp),
-                            color = Color(0xFF2E7D32),
+                            modifier = Modifier.padding(AppDimensions.PaddingMedium),
+                            color = AppColors.SuccessText,
                             fontWeight = FontWeight.Bold
                         )
                     }
@@ -77,30 +92,31 @@ class MainActivity : ComponentActivity() {
                     fontWeight = FontWeight.Bold
                 )
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(AppDimensions.PaddingLarge))
 
                 AsyncImage(
                     model = "https://picsum.photos/seed/arctic/1000/600",
                     contentDescription = "Северный пейзаж",
-                    modifier = Modifier.fillMaxWidth().height(250.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(AppDimensions.ImageHeight),
                     contentScale = ContentScale.Crop
                 )
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(AppDimensions.PaddingLarge))
 
                 Text(
-                    text = "Териберка — это единственное место в России, куда можно доехать на машине, чтобы увидеть открытый Баренцево море и Арктику. Здесь заброшенные корабли встречаются с суровой красотой тундры, а зимой небо расцветает северным сиянием.",
+                    text = "Териберка — это единственное место в России, куда можно доехать на машине, чтобы увидеть открытый Баренцево море и Арктику...",
                     style = MaterialTheme.typography.bodyLarge
                 )
 
-                Spacer(modifier = Modifier.height(24.dp))
+                Spacer(modifier = Modifier.height(AppDimensions.PaddingExtraLarge))
 
-                // Ряд с кнопками
+
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(AppDimensions.PaddingSmall)
                 ) {
-                    // Лайк
                     Button(
                         modifier = Modifier.weight(1f),
                         onClick = { likes++ }
@@ -108,22 +124,20 @@ class MainActivity : ComponentActivity() {
                         Text("❤️ $likes")
                     }
 
-                    // Дизлайк (Новая кнопка)
                     Button(
                         modifier = Modifier.weight(1f),
                         onClick = { dislikes++ },
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFE57373))
+                        colors = ButtonDefaults.buttonColors(containerColor = AppColors.DislikeButton)
                     ) {
                         Text("👎 $dislikes")
                     }
 
-                    // Поделиться
                     Button(
                         modifier = Modifier.weight(1.2f),
                         onClick = {
                             val sendIntent = Intent().apply {
                                 action = Intent.ACTION_SEND
-                                putExtra(Intent.EXTRA_TEXT, "Посмотри, какая магия на Севере! Читаю про Териберку.")
+                                putExtra(Intent.EXTRA_TEXT, "Посмотри, какая магия на Севере!")
                                 type = "text/plain"
                             }
                             context.startActivity(Intent.createChooser(sendIntent, "Поделиться"))
@@ -133,7 +147,7 @@ class MainActivity : ComponentActivity() {
                     }
                 }
 
-                Spacer(modifier = Modifier.height(24.dp))
+                Spacer(modifier = Modifier.height(AppDimensions.PaddingExtraLarge))
 
                 Button(
                     modifier = Modifier.fillMaxWidth(),
@@ -149,6 +163,7 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
 
     override fun onStart() { super.onStart(); Log.d(TAG, "onStart") }
     override fun onResume() { super.onResume(); Log.d(TAG, "onResume") }

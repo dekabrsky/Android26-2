@@ -1,59 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:orientation="vertical"
+    tools:context=".SecondActivity">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Кладбище кораблей"
+        app:titleTextColor="@android:color/white" />
 
-        <TextView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Кладбище заброшенных кораблей"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <ImageView
-            android:id="@+id/second_image"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_marginTop="16dp"
-            android:scaleType="centerCrop"
-            android:background="#DDDDDD" />
+            <TextView
+                style="@style/ArticleHeader"
+                android:text="Кладбище заброшенных кораблей" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:lineSpacingExtra="4sp"
-            android:text="На берегу Баренцева моря доживают свой век остовы деревянных рыболовецких судов начала XX века. В отлив к ним можно подойти почти вплотную. Это одно из самых атмосферных и меланхоличных мест Кольского полуострова."
-            android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/second_image"
+                style="@style/ArticleHeroImage" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            <TextView
+                style="@style/ArticleContent"
+                android:text="На берегу Баренцева моря доживают свой век остовы деревянных рыболовецких судов начала XX века. В отлив к ним можно подойти почти вплотную. Это одно из самых атмосферных и меланхоличных мест Кольского полуострова." />
 
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switch_read"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="24dp"
-            android:text="Прочитано  "
-            android:textSize="18sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-        <Button
-            android:id="@+id/btn_back"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Вернуться к началу" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:text="Прочитано  "
+                android:textSize="18sp" />
 
-    </LinearLayout>
-</ScrollView>
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Вернуться к началу" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
