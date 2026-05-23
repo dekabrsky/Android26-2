@@ -15,4 +15,53 @@
         android:title="@string/article_title"
         android:navigationIcon="@drawable/arrow_back" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Почему Kotlin удобен для Android"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Kotlin хорошо подходит для Android-разработки, потому что код на нем обычно получается короче и понятнее, чем на Java."
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="В языке есть удобная работа с null, строки-шаблоны и функции, поэтому код часто получается короче."
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Еще Kotlin официально поддерживается Google, поэтому его часто используют в современных Android-проектах."
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/readCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Прочитано" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
