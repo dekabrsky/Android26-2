@@ -1,4 +1,46 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
     <string name="article_title">Статья</string>
+
+    <string name="first_article_title">Шпицы: Пушистые клубки с характером льва</string>
+    <string name="first_article_lead">Небольшие, пушистые собаки с лисьей мордочкой покорили много сердец. Но за милой внешностью скрывается умный, смелый и независимый пёс.</string>
+    <string name="first_article_image_description">Шпиц</string>
+    <string name="first_article_image_caption">Померанский шпиц — самый узнаваемый представитель группы</string>
+    <string name="first_article_section1">От торфяных собак до дивана</string>
+    <string name="first_article_paragraph1">Шпицы — одна из древнейших групп пород. Их предки, торфяные собаки каменного века, жили рядом с человеком ещё несколько тысяч лет назад.</string>
+    <string name="first_article_paragraph2">За это время шпиц успел побыть охотником, пастухом, сторожем и ездовой собакой. А теперь — просто лежит на подушке и делает вид, что это его трон.</string>
+    <string name="first_article_section2">Характер: маленький, но с амбициями</string>
+    <string name="first_article_paragraph3">Шпиц — это собака с ярко выраженным чувством собственного достоинства. Он умён, любопытен и очень наблюдателен.</string>
+    <string name="first_article_quality1_title">Умный</string>
+    <string name="first_article_quality1_text">Осваивает команды быстро, но выполняет только то, что считает нужным.</string>
+    <string name="first_article_quality2_title">Смелый</string>
+    <string name="first_article_quality2_text">Не боится собак крупнее себя. Иногда это проблема.</string>
+    <string name="first_article_quality3_title">Верный</string>
+    <string name="first_article_quality3_text">Выбирает одного человека и любит его всей душой. Остальных — терпит.</string>
+    <string name="first_article_quote">«Шпиц считает себя большой собакой. Просто обстоятельства сложились иначе».</string>
+
+    <string name="share_title">Поделиться статьёй</string>
+    <string name="share_text">Шпицы: Пушистые клубки с характером льва. Читайте в приложении!</string>
+    <string name="share_icon_description">Поделиться</string>
+    <string name="like_icon_description">Лайк</string>
+    <string name="dislike_icon_description">Дизлайк</string>
+    <string name="read_more_label">Читать дальше</string>
+
+    <string name="second_article_title">Мейн-куны: гиганты с кошачьим сердцем</string>
+    <string name="second_article_subtitle">питомцы • 10 минут чтения</string>
+    <string name="second_article_image_caption">Мейн-кун — самая крупная домашняя кошка</string>
+    <string name="second_article_section1">От фермерских амбаров до городских квартир</string>
+    <string name="second_article_paragraph1">Мейн-куны появились на северо-востоке США, в штате Мэн. Их предки жили на фермах, охраняли амбары от грызунов и помогали морякам на кораблях.</string>
+    <string name="second_article_paragraph2">Со временем из сурового охотника мейн-кун превратился в домашнего любимца. Но повадки остались — он до сих пор любит охотиться, наблюдать и следить за порядком в доме.</string>
+    <string name="second_article_section2">Характер: большой, но ласковый</string>
+    <string name="second_article_paragraph3">Мейн-кун — это кошка-компаньон. Она не любит сидеть на руках, но всегда рядом: спит у ног, ходит за хозяином и участвует во всех делах.</string>
+    <string name="second_article_quality1_title">Крупный</string>
+    <string name="second_article_quality1_text">Вес самца может достигать 8–10 килограммов. Это действительно большая кошка.</string>
+    <string name="second_article_quality2_title">Умный</string>
+    <string name="second_article_quality2_text">Быстро понимает правила дома, открывает двери и легко учится простым командам.</string>
+    <string name="second_article_quality3_title">Ласковый</string>
+    <string name="second_article_quality3_text">Обожает хозяина, но уважает личное пространство — не будет навязываться.</string>
+    <string name="second_article_quote">«Мейн-кун — это собака в кошачьем теле. Только с усами».</string>
+    <string name="read_label">Прочитано</string>
+    <string name="image_description">Изображение мейн-куна</string>
 </resources>
