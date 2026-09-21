@@ -1,4 +1,53 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="app_name">Футбольные статьи</string>
+    <string name="back">Назад</string>
+
+    <string name="first_article_toolbar_title">Футбол</string>
+
+    <string name="first_article_title">Сборная России на ЧМ-2018: путь до четвертьфинала</string>
+
+    <string name="first_article_lead">Домашний чемпионат мира стал одним из самых запоминающихся турниров для сборной России. Команда вышла из группы и дошла до четвертьфинала.</string>
+
+    <string name="first_article_image_description">Футбольная иллюстрация</string>
+
+    <string name="first_article_image_caption">Иллюстрация к статье. Фото: Unsplash. Это не фотография сборной России.</string>
+
+    <string name="first_article_paragraph_1">Сборная России начала турнир с победы над Саудовской Аравией со счётом 5:0. Во втором матче команда обыграла Египет — 3:1. Несмотря на поражение от Уругвая со счётом 0:3, российские футболисты заняли второе место в группе и вышли в плей-офф.</string>
+
+    <string name="first_article_subtitle">Два матча, решившихся по пенальти</string>
+
+    <string name="first_article_paragraph_2">В одной восьмой финала Россия встретилась с Испанией. Основное и дополнительное время завершились со счётом 1:1, а в серии пенальти российская команда победила — 4:3. В четвертьфинале соперником стала Хорватия. После ничьей 2:2 Россия уступила в серии пенальти со счётом 3:4 и завершила выступление на турнире.</string>
+
+    <string name="share">Поделиться</string>
+    <string name="share_article">Поделиться статьёй</string>
+    <string name="rate_article">Оцените статью</string>
+
+    <string name="likes_count">Лайки: %1$d</string>
+    <string name="dislikes_count">Дизлайки: %1$d</string>
+
+    <string name="read_next">Читайте дальше</string>
+    <string name="read_status">✓ Прочитано</string>
+    <string name="open_article">Открыть статью →</string>
+
+    <string name="second_article_toolbar_title">Россия — Испания</string>
+
+    <string name="second_article_title">Россия — Испания: победа в серии пенальти</string>
+
+    <string name="second_article_card_description">Как сборная России обыграла Испанию и вышла в четвертьфинал домашнего чемпионата мира.</string>
+
+    <string name="second_article_lead">1 июля 2018 года в московских «Лужниках» сборная России встретилась с Испанией в одной восьмой финала чемпионата мира.</string>
+
+    <string name="second_article_image_description">Футбольный стадион</string>
+
+    <string name="second_article_image_caption">Иллюстрация к статье. Фото: Unsplash. Это не фотография матча Россия — Испания.</string>
+
+    <string name="second_article_paragraph_1">Испания открыла счёт после автогола Сергея Игнашевича. До перерыва Артём Дзюба реализовал пенальти и сравнял счёт. Во втором тайме и дополнительное время команды больше не забивали — 1:1.</string>
+
+    <string name="second_article_subtitle">Решающие удары</string>
+
+    <string name="second_article_quote">Россия выиграла серию пенальти со счётом 4:3.</string>
+
+    <string name="second_article_paragraph_2">В серии пенальти Фёдор Смолов, Сергей Игнашевич, Александр Головин и Денис Черышев реализовали свои удары. Игорь Акинфеев отразил удары Коке и Яго Аспаса. Сборная России вышла в четвертьфинал, где затем встретилась с Хорватией.</string>
+
+    <string name="mark_as_read">Прочитано</string>
 </resources>
