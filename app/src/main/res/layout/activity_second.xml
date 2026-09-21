@@ -2,17 +2,72 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".SecondActivity">
 
-    <Toolbar
+    <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="@drawable/arrow_back"
+        app:title="Мифы о напитках"
+        app:titleTextColor="@android:color/white" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Правда ли, что кола растворяет желудок?"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="16dp"/>
+
+            <ImageView
+                android:id="@+id/articleImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Один из самых старых мифов гласит: если положить кусок мяса в стакан с колой, он растворится за ночь. А значит, этот напиток буквально прожигает дыру в нашем желудке!"
+                android:textSize="18sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Но это лишь страшилка. Желудочный сок человека намного более кислый и агрессивный, чем любая газировка. Наш желудок создан так, чтобы переваривать еду и защищаться от собственной кислоты, поэтому сладкая вода ему не страшна. Главная опасность колы — не в мифической кислоте, а в огромном количестве сахара."
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="24dp"/>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchRead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Прочитано"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
