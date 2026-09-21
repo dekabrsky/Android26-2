@@ -1,0 +1,4 @@
+testsuite: {'name': 'ru.urfu.droidpractice1.ArticlesTest', 'tests': '3', 'failures': '0', 'errors': '0', 'skipped': '0', 'time': '16.843', 'timestamp': '2026-09-21T19:38:23', 'hostname': 'localhost'}
+PASS shareSendsTheWholeArticleAsPlainText
+PASS countersSurviveActivityRecreation
+PASS readSwitchSurvivesRecreationAndReturnsBothTrueAndFalse

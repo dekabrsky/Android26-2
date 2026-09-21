@@ -1,4 +1,49 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="app_name">Вне города</string>
+    <string name="brand">ВНЕ ГОРОДА</string>
+    <string name="issue">ЖУРНАЛ О МАЛЕНЬКИХ ПУТЕШЕСТВИЯХ</string>
+    <string name="article_title">Ближе к горам,
+дальше от суеты</string>
+    <string name="article_category">МАРШРУТЫ / 01</string>
+    <string name="article_meta">Редакция «Вне города» · 3 минуты</string>
+    <string name="article_lead">Иногда лучший план на выходные — выйти из привычного ритма и оказаться там, где горизонт не заканчивается соседним домом.</string>
+    <string name="article_heading_one">Дорога начинается с паузы</string>
+    <string name="article_body_one">Утром город ещё спит, а за окном электрички уже проплывают леса. Постепенно сообщения и списки дел уступают место простому любопытству: что там, за следующим поворотом тропы? Для такого путешествия не обязательно ехать далеко. Знакомый холм за городом тоже может стать новой точкой на карте.</string>
+    <string name="article_quote">«Не каждую вершину нужно покорять.
+Иногда достаточно на неё посмотреть».</string>
+    <string name="article_heading_two">Замечать, а не торопиться</string>
+    <string name="article_body_two">На тропе расстояние ощущается иначе. Километр — это шорох хвои, остановка у ручья и несколько минут тишины. Если не стремиться к рекорду, остаётся время заметить, как облака меняют цвет склона и как пахнет нагретая солнцем кора.</string>
+    <string name="article_body_three">Мы выбираем короткий знакомый маршрут и оставляем время на возвращение засветло. На привале достаём термос, делимся бутербродами и просто смотрим вдаль. Самое ценное в этой прогулке — возможность никуда не спешить.</string>
+    <string name="image_description">Горный хребет под облачным небом</string>
+    <string name="image_caption">Там, где появляется место для тишины. Фото: Unsplash.</string>
+    <string name="share">Поделиться статьёй</string>
+    <string name="share_chooser">Поделиться через</string>
+    <string name="reaction_prompt">Как вам эта история?</string>
+    <string name="likes">Нравится · %1$d</string>
+    <string name="dislikes">Не нравится · %1$d</string>
+    <string name="next_label">ЧИТАЙТЕ ДАЛЬШЕ / 02</string>
+    <string name="second_title">Что взять
+с собой на тропу</string>
+    <string name="second_title_inline">Что взять с собой на тропу</string>
+    <string name="next_description">Небольшой рюкзак для большого дня.</string>
+    <string name="open_article">Читать статью →</string>
+    <string name="read_again">Читать ещё раз →</string>
+    <string name="read_badge">✓ Прочитано</string>
+    <string name="unread_badge">Ещё не прочитано</string>
+    <string name="second_category">ДЕТАЛИ / 02</string>
+    <string name="second_meta">Редакция «Вне города» · 2 минуты</string>
+    <string name="second_lead">Собирать рюкзак — отдельное удовольствие. Особенно когда в нём остаётся только то, что пригодится на короткой прогулке.</string>
+    <string name="second_heading_one">01 / Самое простое</string>
+    <string name="second_body_one">Вода, перекус и заряженный телефон отправляются в рюкзак первыми. Рядом — небольшой пакет для мусора: после привала хочется оставить поляну такой же чистой, какой мы её нашли.</string>
+    <string name="second_heading_two">02 / Немного уюта</string>
+    <string name="second_body_two">Лёгкая куртка занимает совсем немного места, а на ветреном привале становится любимой вещью. В прохладный день мы берём термос. Горячий чай с видом на лес почему-то всегда вкуснее домашнего.</string>
+    <string name="second_quote">Меньше вещей.
+Больше впечатлений.</string>
+    <string name="second_heading_three">03 / Место для любопытства</string>
+    <string name="second_body_three">Блокнот, карандаш или маленькая камера — у каждого есть свой способ сохранить день. Можно зарисовать силуэт горы, записать название станции или просто запомнить, как свет ложился на тропу. Этот список — зарисовка наших прогулок, а набор для конкретного маршрута зависит от погоды, места и длительности пути.</string>
+    <string name="second_image_description">Лес и горы на пути путешественника</string>
+    <string name="second_image_caption">Всё нужное — за плечами. Фото: Unsplash.</string>
+    <string name="read_switch">Прочитано</string>
+    <string name="read_hint">Отметка появится на первой статье</string>
+    <string name="back">Назад к первой статье</string>
 </resources>

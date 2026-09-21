@@ -1,0 +1,157 @@
+--------- beginning of main
+D/MainActivity( 5701): onCreate restored=false
+D/MainActivity( 5701): onStart
+D/MainActivity( 5701): onResume
+D/MainActivity( 6599): onCreate restored=false
+D/MainActivity( 6599): onStart
+D/MainActivity( 6599): onResume
+D/MainActivity( 6599): onPause
+D/MainActivity( 6599): onResume
+D/MainActivity( 6599): onPause
+D/MainActivity( 6599): onStop
+D/MainActivity( 6599): onDestroy changingConfigurations=false
+D/MainActivity( 6599): onCreate restored=false
+D/MainActivity( 6599): onStart
+D/MainActivity( 6599): onResume
+D/MainActivity( 6599): onPause
+D/MainActivity( 6599): onStop
+D/MainActivity( 6599): onSaveInstanceState likes=2 dislikes=1 read=false
+D/MainActivity( 6599): onDestroy changingConfigurations=true
+D/MainActivity( 6599): onCreate restored=true
+D/MainActivity( 6599): onStart
+D/MainActivity( 6599): onResume
+D/MainActivity( 6599): onPause
+D/MainActivity( 6599): onStop
+D/MainActivity( 6599): onSaveInstanceState likes=2 dislikes=1 read=false
+D/MainActivity( 6599): onDestroy changingConfigurations=true
+D/MainActivity( 6599): onCreate restored=true
+D/MainActivity( 6599): onStart
+D/MainActivity( 6599): onResume
+D/MainActivity( 6599): onPause
+D/MainActivity( 6599): onStop
+D/MainActivity( 6599): onSaveInstanceState likes=2 dislikes=1 read=false
+D/MainActivity( 6599): onDestroy changingConfigurations=true
+D/MainActivity( 6599): onCreate restored=true
+D/MainActivity( 6599): onStart
+D/MainActivity( 6599): onResume
+D/MainActivity( 6599): onPause
+D/MainActivity( 6599): onStop
+D/MainActivity( 6599): onDestroy changingConfigurations=false
+D/MainActivity( 6599): onCreate restored=false
+D/MainActivity( 6599): onStart
+D/MainActivity( 6599): onResume
+D/MainActivity( 6599): onPause
+D/SecondActivity( 6599): onCreate restored=false
+D/SecondActivity( 6599): onStart
+D/SecondActivity( 6599): onResume
+D/MainActivity( 6599): onStop
+D/MainActivity( 6599): onSaveInstanceState likes=1 dislikes=0 read=false
+D/SecondActivity( 6599): onPause
+D/SecondActivity( 6599): onStop
+D/SecondActivity( 6599): onSaveInstanceState read=true
+D/SecondActivity( 6599): onDestroy changingConfigurations=true
+D/SecondActivity( 6599): onCreate restored=true
+D/SecondActivity( 6599): onStart
+D/SecondActivity( 6599): onResume
+D/SecondActivity( 6599): onPause
+D/MainActivity( 6599): onRestart
+D/MainActivity( 6599): onStart
+D/MainActivity( 6599): onResume
+D/SecondActivity( 6599): onStop
+D/SecondActivity( 6599): onDestroy changingConfigurations=false
+D/MainActivity( 6599): onPause
+D/MainActivity( 6599): onStop
+D/MainActivity( 6599): onSaveInstanceState likes=1 dislikes=0 read=true
+D/MainActivity( 6599): onDestroy changingConfigurations=true
+D/MainActivity( 6599): onCreate restored=true
+D/MainActivity( 6599): onStart
+D/MainActivity( 6599): onResume
+D/MainActivity( 6599): onPause
+D/SecondActivity( 6599): onCreate restored=false
+D/SecondActivity( 6599): onStart
+D/SecondActivity( 6599): onResume
+D/MainActivity( 6599): onStop
+D/MainActivity( 6599): onSaveInstanceState likes=1 dislikes=0 read=true
+D/SecondActivity( 6599): onPause
+D/MainActivity( 6599): onRestart
+D/MainActivity( 6599): onStart
+D/MainActivity( 6599): onResume
+D/SecondActivity( 6599): onStop
+D/SecondActivity( 6599): onDestroy changingConfigurations=false
+D/MainActivity( 6599): onPause
+D/SecondActivity( 6599): onCreate restored=false
+D/SecondActivity( 6599): onStart
+D/SecondActivity( 6599): onResume
+D/MainActivity( 6599): onStop
+D/MainActivity( 6599): onSaveInstanceState likes=1 dislikes=0 read=false
+D/SecondActivity( 6599): onPause
+D/MainActivity( 6599): onRestart
+D/MainActivity( 6599): onStart
+D/MainActivity( 6599): onResume
+D/MainActivity( 6599): onPause
+D/SecondActivity( 6599): onStop
+D/SecondActivity( 6599): onDestroy changingConfigurations=false
+D/MainActivity( 6599): onStop
+D/MainActivity( 6599): onDestroy changingConfigurations=false
+D/MainActivity( 6841): onCreate restored=false
+D/MainActivity( 6841): onStart
+D/MainActivity( 6841): onResume
+D/MainActivity( 6841): onPause
+D/SecondActivity( 6841): onCreate restored=false
+D/SecondActivity( 6841): onStart
+D/SecondActivity( 6841): onResume
+D/MainActivity( 6841): onStop
+D/MainActivity( 6841): onSaveInstanceState likes=0 dislikes=0 read=false
+D/SecondActivity( 6841): onPause
+D/MainActivity( 6841): onRestart
+D/MainActivity( 6841): onStart
+D/MainActivity( 6841): onResume
+D/SecondActivity( 6841): onStop
+D/SecondActivity( 6841): onDestroy changingConfigurations=false
+D/MainActivity( 7348): onCreate restored=false
+D/MainActivity( 7348): onStart
+D/MainActivity( 7348): onResume
+D/MainActivity( 7348): onPause
+D/MainActivity( 7348): onResume
+D/MainActivity( 7348): onPause
+D/SecondActivity( 7348): onCreate restored=false
+D/SecondActivity( 7348): onStart
+D/SecondActivity( 7348): onResume
+D/MainActivity( 7348): onStop
+D/MainActivity( 7348): onSaveInstanceState likes=2 dislikes=1 read=false
+D/SecondActivity( 7348): onPause
+D/MainActivity( 7348): onRestart
+D/MainActivity( 7348): onStart
+D/MainActivity( 7348): onResume
+D/SecondActivity( 7348): onStop
+D/SecondActivity( 7348): onDestroy changingConfigurations=false
+D/MainActivity( 7348): onPause
+D/SecondActivity( 7348): onCreate restored=false
+D/SecondActivity( 7348): onStart
+D/SecondActivity( 7348): onResume
+D/MainActivity( 7348): onStop
+D/MainActivity( 7348): onSaveInstanceState likes=2 dislikes=1 read=true
+D/SecondActivity( 7348): onPause
+D/MainActivity( 7348): onRestart
+D/MainActivity( 7348): onStart
+D/MainActivity( 7348): onResume
+D/SecondActivity( 7348): onStop
+D/SecondActivity( 7348): onDestroy changingConfigurations=false
+D/MainActivity( 7348): onPause
+D/SecondActivity( 7348): onCreate restored=false
+D/SecondActivity( 7348): onStart
+D/SecondActivity( 7348): onResume
+D/MainActivity( 7348): onStop
+D/MainActivity( 7348): onSaveInstanceState likes=2 dislikes=1 read=false
+D/SecondActivity( 7348): onPause
+D/MainActivity( 7348): onRestart
+D/MainActivity( 7348): onStart
+D/MainActivity( 7348): onResume
+D/SecondActivity( 7348): onStop
+D/SecondActivity( 7348): onDestroy changingConfigurations=false
+D/MainActivity( 7348): onPause
+D/MainActivity( 7348): onStop
+D/MainActivity( 7348): onSaveInstanceState likes=2 dislikes=1 read=false
+D/MainActivity( 7348): onRestart
+D/MainActivity( 7348): onStart
+D/MainActivity( 7348): onResume

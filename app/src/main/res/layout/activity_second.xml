@@ -1,18 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".SecondActivity">
-
-    <Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
-
+    android:id="@+id/main" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical"
+    android:background="@color/paper">
+    <Toolbar android:id="@+id/toolbar" android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize" android:title="@string/brand"
+        android:titleTextColor="@color/ink" android:navigationIcon="@drawable/arrow_back"
+        android:navigationContentDescription="@string/back" />
+    <ScrollView android:id="@+id/article_scroll" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp">
+            <TextView style="@style/ArticleCaption" android:text="@string/second_category"
+                android:letterSpacing="0.15" android:textColor="@color/forest" />
+            <TextView style="@style/ArticleHeading" android:text="@string/second_title"
+                android:textSize="38sp" android:lineSpacingExtra="0dp" />
+            <TextView style="@style/ArticleCaption" android:text="@string/second_meta" />
+            <TextView style="@style/ArticleBody" android:text="@string/second_lead" android:textSize="19sp" />
+            <ImageView android:id="@+id/article_image" android:layout_width="match_parent"
+                android:layout_height="240dp" android:layout_marginTop="24dp"
+                android:scaleType="centerCrop" android:contentDescription="@string/second_image_description"
+                android:src="@drawable/mountain_placeholder" />
+            <TextView style="@style/ArticleCaption" android:text="@string/second_image_caption"
+                android:gravity="end" />
+            <TextView style="@style/ArticleHeading" android:text="@string/second_heading_one" />
+            <TextView style="@style/ArticleBody" android:text="@string/second_body_one" />
+            <TextView style="@style/ArticleHeading" android:text="@string/second_heading_two" />
+            <TextView style="@style/ArticleBody" android:text="@string/second_body_two" />
+            <TextView style="@style/ArticleBody" android:text="@string/second_quote"
+                android:fontFamily="serif" android:textStyle="italic" android:textSize="28sp"
+                android:textColor="@color/forest" android:gravity="center"
+                android:padding="24dp" android:background="@color/sage" android:layout_marginTop="28dp" />
+            <TextView style="@style/ArticleHeading" android:text="@string/second_heading_three" />
+            <TextView style="@style/ArticleBody" android:text="@string/second_body_three" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="32dp" android:padding="20dp" android:orientation="vertical"
+                android:background="@drawable/read_panel">
+                <Switch android:id="@+id/read_switch" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:minHeight="48dp"
+                    android:text="@string/read_switch" android:textColor="@color/forest"
+                    android:textSize="20sp" android:switchPadding="16dp" />
+                <TextView style="@style/ArticleCaption" android:text="@string/read_hint" />
+            </LinearLayout>
+            <Button android:id="@+id/back_button" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="56dp" android:layout_marginTop="20dp"
+                android:text="@string/back" android:textAllCaps="false"
+                android:backgroundTint="@color/forest" android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
