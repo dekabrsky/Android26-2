@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="article_horizontal_padding">32dp</dimen>
+    <dimen name="article_title_size">26sp</dimen>
+    <dimen name="article_lead_size">18sp</dimen>
+    <dimen name="article_body_size">16sp</dimen>
+    <dimen name="article_image_height">260dp</dimen>
+</resources>
