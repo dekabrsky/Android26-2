@@ -1,18 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@android:color/white"
     tools:context=".SecondActivity">
 
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:navigationIcon="@drawable/arrow_back"
+        android:title="Баскетбол" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Осар Томпсон получил контракт на $155 млн"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="«Детройт Пистонс» сохранил одного из своих главных молодых игроков. Осар Томпсон договорился с клубом о новом долгосрочном соглашении."
+                android:textSize="17sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="235dp"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/ausar_main"
+                android:scaleType="centerCrop"
+                android:contentDescription="Осар Томпсон" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Пять лет в Детройте"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Новый контракт рассчитан на пять лет и оценивается в 155 миллионов долларов. Соглашение полностью гарантировано и начнёт действовать с сезона 2027/2028."
+                android:textSize="16sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Один из лучших защитников"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Прошлый сезон стал для Томпсона прорывным. Он вошёл в первую сборную лучших защитников НБА и занял третье место в голосовании за звание лучшего оборонительного игрока сезона."
+                android:textSize="16sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Статистика сезона"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="В регулярном чемпионате Осар набирал в среднем 9,9 очка, 5,7 подбора и 3,1 передачи. Также он делал 2,0 перехвата за матч — лучший показатель в лиге."
+                android:textSize="16sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/thompson_brothers"
+                android:scaleType="centerCrop"
+                android:contentDescription="Братья Томпсон" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Самые дорогие близнецы НБА"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Брат Осара, Амен Томпсон, ранее подписал пятилетний контракт с «Хьюстоном» на 208 миллионов долларов. В сумме братья заработают по новым соглашениям около 363 миллионов долларов."
+                android:textSize="16sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Что дальше?"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Главной задачей Томпсона остаётся развитие игры в атаке. Его ценность в защите уже очевидна, но стабильный бросок может сделать его ещё более универсальным игроком."
+                android:textSize="16sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@android:color/black" />
+
+            <Switch
+                android:id="@+id/readSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="Статья прочитана"
+                android:textSize="17sp"
+                android:textColor="@android:color/black" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
