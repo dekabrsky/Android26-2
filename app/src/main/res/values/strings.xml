@@ -1,4 +1,35 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="app_name">Две статьи</string>
+
+    <!-- Первая статья -->
+    <string name="article1_title">Северное сияние над Мурманском</string>
+    <string name="article1_toolbar_title">Северное сияние</string>
+    <string name="article1_subtitle">Астрономия · 12 мин чтения</string>
+    <string name="article1_lead">Жители Заполярья снова наблюдают редкое по яркости северное сияние: ночное небо окрасилось в зелёный и фиолетовый.</string>
+    <string name="article1_body">По данным геофизической обсерватории, вспышка связана с мощным выбросом корональной массы Солнца. Частицы солнечного ветра достигли магнитосферы Земли и вызвали повышенную активность в высоких широтах.\n\nЛучшее время для наблюдений — после полуночи при ясной погоде. Специалисты советуют выезжать за город, подальше от уличного освещения, и заранее проверить прогноз магнитной бури.\n\nФотографы уже делятся снимками: дуги сияния тянутся от горизонта до зенита. Похожие вспышки ожидаются в ближайшие сутки — следите за индексом Kp.</string>
+    <string name="article1_share_text">Северное сияние над Мурманском\n\nЖители Заполярья снова наблюдают редкое по яркости северное сияние: ночное небо окрасилось в зелёный и фиолетовый.\n\nПо данным геофизической обсерватории, вспышка связана с мощным выбросом корональной массы Солнца. Частицы солнечного ветра достигли магнитосферы Земли и вызвали повышенную активность в высоких широтах.</string>
+    <string name="article1_image_url">https://picsum.photos/id/1015/800/450</string>
+
+    <!-- Вторая статья -->
+    <string name="article2_title">Как фотографировать сияние на смартфон</string>
+    <string name="article2_toolbar_title">Советы фотографа</string>
+    <string name="article2_subtitle">Гайд · советы фотографа</string>
+    <string name="article2_lead">Даже без зеркалки можно поймать северное сияние — если знать настройки и выбрать правильную точку съёмки.</string>
+    <string name="article2_body_1">Включите ночной режим или ручные настройки: выдержка 5–10 секунд, ISO 800–1600, фокус на бесконечность. Штатив или упор обязательны — иначе кадр смажется.</string>
+    <string name="article2_body_2">Снимайте в формате RAW, если камера это позволяет: так проще вытянуть цвет и детали в редакторе. Не забывайте про тёплую одежду — ожидание кадра на морозе занимает время.</string>
+    <string name="article2_quote">«Главное — не гнаться за зумом. Широкий угол и тёмное небо дают самый эффектный кадр.»</string>
+    <string name="article2_image_url">https://picsum.photos/id/250/800/450</string>
+
+    <!-- UI -->
+    <string name="share">Поделиться</string>
+    <string name="like">Нравится</string>
+    <string name="dislike">Не нравится</string>
+    <string name="rating">Оценка: %d</string>
+    <string name="read_next">Читать далее</string>
+    <string name="next_article">Как фотографировать сияние на смартфон</string>
+    <string name="article_read">Прочитано</string>
+    <string name="article_unread">Не прочитано</string>
+    <string name="mark_as_read">Прочитано</string>
+    <string name="share_chooser">Поделиться статьёй</string>
+    <string name="back">Назад</string>
 </resources>

@@ -1,18 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     tools:context=".SecondActivity">
 
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/purple_700"
+        android:elevation="4dp"
+        android:navigationIcon="@drawable/arrow_back"
+        android:title="@string/article2_toolbar_title"
+        android:titleTextColor="@android:color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/article_horizontal_padding"
+            android:paddingTop="12dp"
+            android:paddingEnd="@dimen/article_horizontal_padding"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/article2_subtitle"
+                android:textAllCaps="true"
+                android:textColor="@color/purple_700"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:breakStrategy="balanced"
+                android:hyphenationFrequency="full"
+                android:text="@string/article2_title"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/article_title_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/article_image_height"
+                android:layout_marginTop="12dp"
+                android:adjustViewBounds="true"
+                android:background="#ECEFF1"
+                android:contentDescription="@string/article2_title"
+                android:scaleType="centerCrop"
+                android:src="@drawable/article2_photo" />
+
+            <TextView
+                android:id="@+id/lead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:lineSpacingExtra="2dp"
+                android:text="@string/article2_lead"
+                android:textColor="#212121"
+                android:textSize="@dimen/article_lead_size"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:lineSpacingMultiplier="1.25"
+                android:text="@string/article2_body_1"
+                android:textColor="#424242"
+                android:textSize="@dimen/article_body_size" />
+
+            <TextView
+                android:id="@+id/quote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="#F3E5F5"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.2"
+                android:padding="12dp"
+                android:text="@string/article2_quote"
+                android:textColor="@color/purple_700"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:lineSpacingMultiplier="1.25"
+                android:text="@string/article2_body_2"
+                android:textColor="#424242"
+                android:textSize="@dimen/article_body_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/mark_as_read"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/readSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
