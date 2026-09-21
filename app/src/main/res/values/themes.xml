@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.DroidPractice1" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.DroidPractice1" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">@color/forest</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/paper</item>
+        <item name="android:navigationBarColor">@color/forest</item>
+        <item name="android:windowBackground">@color/paper</item>
+    </style>
+    <style name="ArticleBody">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:lineSpacingExtra">7dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+    <style name="ArticleHeading" parent="ArticleBody">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:layout_marginTop">28dp</item>
+    </style>
+    <style name="ArticleCaption" parent="ArticleBody">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
 </resources>

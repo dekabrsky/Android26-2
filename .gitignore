@@ -8,3 +8,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Local verification artifacts
+*.log
+/tools/
