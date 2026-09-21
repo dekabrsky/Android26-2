@@ -1,4 +1,34 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="app_name">Две статьи</string>
+
+    <string name="article_title">Почему полезно читать каждый день</string>
+    <string name="article_category">Культура и саморазвитие</string>
+    <string name="article_author">Автор: редакция учебного проекта • 5 минут чтения</string>
+    <string name="article_image_description">Стопка книг и чашка кофе</string>
+    <string name="article_lead">Чтение помогает замедлиться, сосредоточиться и каждый день узнавать что-то новое.</string>
+    <string name="article_paragraph_one">Книга не требует мгновенной реакции и не отвлекает уведомлениями. Поэтому во время чтения проще удерживать внимание на одной мысли, следить за развитием сюжета и замечать детали, которые обычно теряются в спешке.</string>
+    <string name="article_quote">«Хорошая статья оставляет после себя вопрос, который хочется обдумать».</string>
+    <string name="article_paragraph_two">Регулярное чтение также расширяет словарный запас. Мы встречаем новые выражения в контексте, видим разные способы объяснить одну идею и постепенно учимся точнее формулировать собственные мысли.</string>
+    <string name="article_subtitle">Как сделать привычку устойчивой</string>
+    <string name="article_paragraph_three">Необязательно сразу планировать большие объёмы. Достаточно выделить десять минут вечером, убрать телефон подальше и выбрать тему, которая действительно интересна. Через несколько дней такой небольшой ритуал станет естественной частью дня.</string>
+    <string name="article_share_text">Почему полезно читать каждый день\n\nЧтение помогает замедлиться, сосредоточиться и каждый день узнавать что-то новое. Регулярное чтение расширяет словарный запас и помогает точнее формулировать мысли.</string>
+    <string name="share_article">Поделиться статьёй</string>
+    <string name="reaction_title">Оцените статью</string>
+    <string name="open_second_article">Открыть вторую статью</string>
+    <string name="second_article_status_read">Вторая статья отмечена как прочитанная</string>
+    <string name="second_article_status_not_read">Вторая статья ещё не прочитана</string>
+
+    <string name="second_article_title">Как запоминать прочитанное</string>
+    <string name="second_article_category">Практические советы</string>
+    <string name="second_article_author">Автор: редакция учебного проекта • 4 минуты чтения</string>
+    <string name="second_article_image_description">Человек читает книгу у окна</string>
+    <string name="second_article_lead">Пара простых действий помогает превратить чтение из просмотра текста в полезный опыт.</string>
+    <string name="second_article_paragraph_one">После главы или статьи попробуйте своими словами сформулировать главную мысль. Такой короткий пересказ показывает, что действительно осталось в памяти, а что стоит перечитать.</string>
+    <string name="second_article_quote">Записывайте не всё подряд, а только идеи, к которым захочется вернуться.</string>
+    <string name="second_article_paragraph_two">Полезно связывать новый материал с уже знакомыми примерами. Если статья рассказывает о привычках, сравните её рекомендации со своим распорядком дня. Личные ассоциации делают информацию понятнее и помогают вспомнить её позже.</string>
+    <string name="second_article_subtitle">Небольшая заметка после чтения</string>
+    <string name="second_article_paragraph_three">В конце можно записать один вывод и один вопрос. Это займёт меньше минуты, но даст материал для дальнейшего размышления и поможет заметить, какие темы хочется изучить глубже.</string>
+    <string name="read_switch_label">Прочитано</string>
+    <string name="second_article_read">Статья отмечена как прочитанная</string>
+    <string name="second_article_not_read">Статья ещё не отмечена как прочитанная</string>
 </resources>
