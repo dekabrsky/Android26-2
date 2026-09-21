@@ -1,4 +1,30 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="app_name">Две статьи</string>
+
+    <string name="first_article_toolbar_title">Первая статья</string>
+    <string name="first_article_title">Почему городам нужны деревья</string>
+    <string name="first_article_lead">Зелёные улицы делают город прохладнее, тише и комфортнее для жизни.</string>
+    <string name="first_article_image_description">Деревья вдоль городской улицы</string>
+    <string name="first_article_image_caption">Городская зелень создаёт тень и помогает удерживать влагу.</string>
+    <string name="first_article_paragraph_one">В жаркий день температура под кроной дерева заметно ниже, чем на открытом асфальте. Листья задерживают солнечное излучение, а испарение воды естественным образом охлаждает воздух. Поэтому даже небольшие зелёные участки влияют на микроклимат целого квартала.</string>
+    <string name="first_article_quote">«Хорошая городская улица — это место, где хочется идти медленнее».</string>
+    <string name="first_article_paragraph_two">Деревья также поглощают часть городского шума, собирают пыль и становятся средой для птиц. Чтобы эффект сохранялся годами, важно выбирать подходящие местные виды и оставлять корням достаточно пространства.</string>
+    <string name="first_article_share_text">Почему городам нужны деревья\n\nЗелёные улицы снижают температуру, удерживают влагу, уменьшают шум и делают прогулки приятнее.</string>
+    <string name="first_article_image_url" translatable="false">https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200</string>
+    <string name="share_article">Поделиться</string>
+    <string name="share_chooser_title">Поделиться статьёй</string>
+    <string name="open_second_article">Читать вторую статью</string>
+    <string name="second_article_read_status">Вторая статья прочитана</string>
+    <string name="second_article_unread_status">Вторая статья ещё не прочитана</string>
+
+    <string name="second_article_toolbar_title">Вторая статья</string>
+    <string name="second_article_title">Как свет меняет архитектуру</string>
+    <string name="second_article_lead">Окно — это не только проём в стене, но и инструмент, который задаёт настроение пространству.</string>
+    <string name="second_article_image_description">Солнечный свет внутри современного здания</string>
+    <string name="second_article_image_caption">Направление света подчёркивает форму и фактуру материалов.</string>
+    <string name="second_article_paragraph_one">Архитектор работает со светом почти так же, как художник с краской. Размер окна, глубина откоса и ориентация здания определяют, каким будет помещение утром, днём и вечером. Мягкий рассеянный свет помогает сосредоточиться, а контрастный создаёт выразительный ритм.</string>
+    <string name="second_article_quote">Свет позволяет увидеть пространство, но одновременно сам становится частью архитектуры.</string>
+    <string name="second_article_paragraph_two">Продуманное естественное освещение снижает потребность в электричестве и связывает интерьер с погодой и временем суток. Именно поэтому один и тот же зал никогда не выглядит совершенно одинаково.</string>
+    <string name="second_article_image_url" translatable="false">https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200</string>
+    <string name="article_read">Прочитано</string>
 </resources>
