@@ -1,18 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".SecondActivity">
+    android:background="#F5F5F5"
+    android:fillViewport="true">
 
-    <Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".SecondActivity">
 
-</LinearLayout>
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E1E2F"
+            android:title="Игровые жанры"
+            android:navigationIcon="@drawable/arrow_back"
+            app:titleTextColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/articleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:text="Roguelike и tower defense"
+            android:textColor="#1C1C1C"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/articleImage"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Обложка статьи про игры"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/imageCaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Когда риск, стратегия и повторные попытки превращают игру в увлекательный цикл"
+            android:textColor="#555555"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/articleSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Почему эти жанры цепляют"
+            android:textColor="#1C1C1C"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/articleText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:lineSpacingExtra="4dp"
+            android:text="В roguelike игрок постоянно сталкивается с непредсказуемостью: карты меняются, враги ведут себя по-разному, а каждый выбор влияет на ход забега. Это не просто сражения, а постоянный тест на гибкость, импровизацию и умение учиться на ошибках."
+            android:textColor="#2A2A2A"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/articleText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="end"
+            android:lineSpacingExtra="4dp"
+            android:text="В tower defense всё строится на планировании. Игра просит не просто быстро реагировать, а заранее расставлять башни, рассчитывать траектории и видеть, как вражеская волна обрушится через несколько минут. Здесь ценится холодный расчет и стратегия."
+            android:textColor="#2A2A2A"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/articleText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:lineSpacingExtra="4dp"
+            android:text="У обоих жанров есть общий секрет: они превращают поражение в часть процесса. Неудача не заканчивает игру, а учит, подсказывает, как лучше подготовиться к следующей попытке. Именно поэтому игроки возвращаются снова и снова."
+            android:textColor="#2A2A2A"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/articleText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="#E8EAF6"
+            android:lineSpacingExtra="4dp"
+            android:padding="14dp"
+            android:text="И в roguelike, и в tower defense главная магия — в том, что игрок чувствует себя участником системы, а не просто зрителем. Он принимает решения, переживает их последствия и видит, как его стратегия меняет исход."
+            android:textColor="#1F1F1F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/readSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Прочитано"
+            android:textColor="#1C1C1C"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView>
