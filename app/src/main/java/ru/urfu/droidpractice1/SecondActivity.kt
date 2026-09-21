@@ -16,12 +16,12 @@ class SecondActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate")
-        
+
         binding = ActivitySecondBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
-        binding.toolbar.setNavigationOnClickListener { 
+        binding.toolbar.setNavigationOnClickListener {
             finishWithResult()
         }
 
@@ -36,10 +36,13 @@ class SecondActivity : ComponentActivity() {
         } else {
             isRead = intent.getBooleanExtra(EXTRA_IS_READ, false)
         }
-        
+
         binding.readSwitch.isChecked = isRead
 
-        binding.articleImage.load("https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800") {
+        // Новая картинка
+        binding.articleImage.load(
+            "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"
+        ) {
             crossfade(true)
         }
 
@@ -48,52 +51,52 @@ class SecondActivity : ComponentActivity() {
             Log.d(TAG, "Read status changed: $isRead")
         }
     }
-    
+
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         Log.d(TAG, "onSaveInstanceState")
         outState.putBoolean(KEY_IS_READ, isRead)
     }
-    
+
     override fun onStart() {
         super.onStart()
         Log.d(TAG, "onStart")
     }
-    
+
     override fun onResume() {
         super.onResume()
         Log.d(TAG, "onResume")
     }
-    
+
     override fun onPause() {
         super.onPause()
         Log.d(TAG, "onPause")
     }
-    
+
     override fun onStop() {
         super.onStop()
         Log.d(TAG, "onStop")
     }
-    
+
     override fun onDestroy() {
         super.onDestroy()
         Log.d(TAG, "onDestroy")
     }
-    
+
     override fun onRestart() {
         super.onRestart()
         Log.d(TAG, "onRestart")
     }
-    
-    
+
     private fun finishWithResult() {
         val resultIntent = Intent().apply {
             putExtra(EXTRA_IS_READ, isRead)
         }
+
         setResult(RESULT_OK, resultIntent)
         finish()
     }
-    
+
     companion object {
         const val EXTRA_IS_READ = "is_read"
         private const val KEY_IS_READ = "is_read_state"

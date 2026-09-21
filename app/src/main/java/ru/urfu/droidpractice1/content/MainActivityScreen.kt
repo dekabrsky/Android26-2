@@ -1,6 +1,4 @@
-﻿@file:OptIn(ExperimentalMaterial3Api::class)
-
-package ru.urfu.droidpractice1.content
+﻿package ru.urfu.droidpractice1.content
 
 import android.content.Intent
 import androidx.compose.foundation.background
@@ -16,8 +14,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Share
-import androidx.compose.material.icons.filled.ThumbDown
-import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -44,9 +41,14 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import ru.urfu.droidpractice1.ui.theme.DroidPractice1Theme
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainActivityScreen() {
+fun MainActivityScreen(
+    isSecondArticleRead: Boolean,
+    onNavigateToSecond: () -> Unit
+) {
     val context = LocalContext.current
+
     var likes by rememberSaveable { mutableIntStateOf(248) }
     var dislikes by rememberSaveable { mutableIntStateOf(31) }
 
@@ -85,14 +87,17 @@ fun MainActivityScreen() {
         системах выбора и ощущении, что ты действительно влиял на исход.
     """.trimIndent()
 
-    val articleTitle = "Roguelike и tower defense: два способа держать игрока в напряжении"
+    val articleTitle =
+        "Roguelike и tower defense: два способа держать игрока в напряжении"
 
     DroidPractice1Theme {
         Scaffold(
             modifier = Modifier.fillMaxSize(),
             topBar = {
                 TopAppBar(
-                    title = { Text(text = "Игровые жанры") },
+                    title = {
+                        Text(text = "Игровые жанры")
+                    },
                     actions = {
                         IconButton(
                             onClick = {
@@ -101,7 +106,12 @@ fun MainActivityScreen() {
                                     putExtra(Intent.EXTRA_TEXT, articleText)
                                     type = "text/plain"
                                 }
-                                val shareIntent = Intent.createChooser(sendIntent, "Поделиться статьёй")
+
+                                val shareIntent = Intent.createChooser(
+                                    sendIntent,
+                                    "Поделиться статьёй"
+                                )
+
                                 context.startActivity(shareIntent)
                             }
                         ) {
@@ -114,6 +124,7 @@ fun MainActivityScreen() {
                 )
             }
         ) { paddingValues ->
+
             Column(
                 modifier = Modifier
                     .fillMaxSize()
@@ -122,6 +133,7 @@ fun MainActivityScreen() {
                     .padding(horizontal = 20.dp, vertical = 16.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
+
                 Text(
                     text = "Геймдизайн",
                     style = MaterialTheme.typography.labelLarge,
@@ -197,19 +209,59 @@ fun MainActivityScreen() {
                     horizontalArrangement = Arrangement.SpaceEvenly,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        IconButton(onClick = { likes++ }) {
-                            Icon(Icons.Default.ThumbUp, contentDescription = "Лайк")
+
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        IconButton(
+                            onClick = {
+                                likes++
+                            }
+                        ) {
+                            Text(
+                                text = "👍",
+                                fontSize = 24.sp
+                            )
                         }
-                        Text(text = likes.toString(), style = MaterialTheme.typography.titleMedium)
+
+                        Text(
+                            text = likes.toString(),
+                            style = MaterialTheme.typography.titleMedium
+                        )
                     }
 
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        IconButton(onClick = { dislikes++ }) {
-                            Icon(Icons.Default.ThumbDown, contentDescription = "Дизлайк")
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        IconButton(
+                            onClick = {
+                                dislikes++
+                            }
+                        ) {
+                            Text(
+                                text = "👎",
+                                fontSize = 24.sp
+                            )
                         }
-                        Text(text = dislikes.toString(), style = MaterialTheme.typography.titleMedium)
+
+                        Text(
+                            text = dislikes.toString(),
+                            style = MaterialTheme.typography.titleMedium
+                        )
                     }
+                }
+
+                Button(
+                    onClick = onNavigateToSecond,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(
+                        text = if (isSecondArticleRead) {
+                            "Вторая статья прочитана"
+                        } else {
+                            "Перейти ко второй статье"
+                        }
+                    )
                 }
 
                 Text(
@@ -226,5 +278,8 @@ fun MainActivityScreen() {
 @Preview(showBackground = true)
 @Composable
 fun MainScreenPreview() {
-    MainActivityScreen()
+    MainActivityScreen(
+        isSecondArticleRead = false,
+        onNavigateToSecond = {}
+    )
 }
