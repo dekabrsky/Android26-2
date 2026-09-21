@@ -1,4 +1,31 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
     <string name="article_title">Статья</string>
+
+    <!-- Статья 1 -->
+    <string name="article_subtitle">Как обычное зерно стало главным напитком планеты</string>
+    <string name="article_intro">Кофе пьют более двух миллиардов чашек в день. Но мало кто задумывается, какой путь проходит зерно до вашей кружки.</string>
+    <string name="article_heading">От эфиопских гор до вашей кухни</string>
+    <string name="article_body">По легенде, кофе открыл пастух Калдим: он заметил, что его козы становятся необычайно бодрыми после поедания красных ягод. Со временем напиток добрался до Аравии, а оттуда покорил Европу.</string>
+    <string name="article_quote">«Кофе должен быть горячим, как ад, чёрным, как дьявол, чистым, как ангел, и сладким, как любовь».</string>
+    <string name="article_quote_author">— Шарль Морис де Талейран</string>
+    <string name="article_body_2">Сегодня крупнейшие производители кофе — Бразилия, Вьетнам и Колумбия. Каждый сорт имеет свой вкус, зависящий от высоты, почвы и способа обработки.</string>
+    <string name="share_button">Поделиться</string>
+    <string name="share_chooser">Поделиться статьёй</string>
+    <string name="next_article_button">Читать следующую статью</string>
+    <string name="second_article_read">Вторая статья прочитана ✓</string>
+    <string name="second_article_unread">Вторая статья ещё не прочитана</string>
+
+    <!-- Статья 2 -->
+    <string name="second_title">Пять способов заварить идеальный кофе</string>
+    <string name="second_author">Редакция · 5 минут чтения</string>
+    <string name="second_lead">Один и тот же кофе может быть кислым, горьким или бархатным. Всё решает способ приготовления.</string>
+    <string name="second_heading_1">1. Эспрессо</string>
+    <string name="second_body_1">Горячая вода под давлением проходит через плотную «таблетку» молотого кофе за 25–30 секунд. Получается густой, насыщенный напиток с плотной пенкой — основа для капучино и латте.</string>
+    <string name="second_heading_2">2. Воронка (V60)</string>
+    <string name="second_body_2">Фильтр-кофе раскрывает фруктовые и цветочные ноты зерна. Вода заливается тонкой струёй по спирали, а напиток получается прозрачным и лёгким.</string>
+    <string name="second_heading_3">3. Френч-пресс</string>
+    <string name="second_body_3">Самый простой способ: залейте молотый кофе водой, подождите четыре минуты и опустите поршень. Вкус выходит плотным и маслянистым.</string>
+    <string name="second_note">Совет: используйте свежемолотый кофе и воду температурой около 92–95 °C.</string>
+    <string name="second_read_switch">Прочитано</string>
 </resources>
