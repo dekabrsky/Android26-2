@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="article_background">#FFFDF8F0</color>
+    <color name="article_text">#FF202124</color>
+    <color name="article_secondary_text">#FF5F6368</color>
+    <color name="toolbar_background">#FF315C54</color>
+    <color name="toolbar_text">#FFFFFFFF</color>
+    <color name="quote_background">#FFE4F1EE</color>
+    <color name="quote_text">#FF173B35</color>
 </resources>

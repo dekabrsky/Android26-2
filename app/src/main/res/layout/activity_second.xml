@@ -5,14 +5,113 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/article_background"
     android:orientation="vertical"
     tools:context=".SecondActivity">
 
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/toolbar_background"
+        android:elevation="4dp"
         android:title="@string/article_title"
+        android:titleTextColor="@color/toolbar_text"
         android:navigationIcon="@drawable/arrow_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/second_article_title"
+                android:textColor="@color/article_text"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/second_article_subtitle"
+                android:textColor="@color/article_secondary_text"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/articleImage"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/article_image_placeholder"
+                android:contentDescription="@string/second_article_image_description"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/second_article_paragraph_1"
+                android:textColor="@color/article_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/second_article_paragraph_2"
+                android:textColor="@color/article_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/quote_background"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp"
+                android:text="@string/second_article_quote"
+                android:textColor="@color/quote_text"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="end"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/second_article_paragraph_3"
+                android:textColor="@color/article_text"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/readSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:minHeight="48dp"
+                android:text="@string/read"
+                android:textOff="@string/read"
+                android:textOn="@string/read"
+                android:textColor="@color/article_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:showText="false" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
