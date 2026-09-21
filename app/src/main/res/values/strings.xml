@@ -1,4 +1,27 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
+    <string name="app_name">DroidPractice_TwoArticles</string>
+
+    <!-- Статья 1 (Compose) -->
     <string name="article_title">Статья</string>
+    <string name="article_headline">Падел — самый быстрорастущий вид спорта в мире</string>
+    <string name="article_subtitle">Смесь тенниса и сквоша, в которую влюбляются с первой игры</string>
+    <string name="article_image_url">https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZi2K5Uf0KIaziE-bosVOBQezUPT-zWmu74yG8dhShba9ggMMoCIt1-74&amp;s=10</string>
+    <string name="article_body_1">Падел появился в Мексике в конце 1960-х и долгое время оставался нишевым увлечением. За последние пять лет число кортов в Европе выросло в несколько раз, а сама игра стала одной из самых обсуждаемых в любительском спорте.</string>
+    <string name="article_quote">«Падел проще большого тенниса технически, но не менее азартен» — из интервью с тренером сборной</string>
+    <string name="article_body_2">Играют парами на закрытом корте со стеклянными стенками, мяч можно отбивать после отскока от стены — это делает розыгрыши длиннее и зрелищнее, чем в классическом теннисе.</string>
+    <string name="article_share_text">Падел — самый быстрорастущий вид спорта в мире. Смесь тенниса и сквоша, в которую влюбляются с первой игры!</string>
+    <string name="share_action">Поделиться</string>
+    <string name="share_chooser_title">Поделиться статьёй</string>
+    <string name="next_article_action">Читать следующую статью</string>
+    <string name="second_article_read_hint">✓ Вторая статья прочитана</string>
+
+    <!-- Статья 2 (XML/Views) -->
+    <string name="article2_title">Статья 2</string>
+    <string name="article2_headline">Восстановление после тренировки: 5 привычек</string>
+    <string name="article2_subtitle">Что делать в первые 30 минут после нагрузки</string>
+    <string name="article2_image_url">https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTflHoBsgQl9HEjffYOlb-DZbttv102G-X5XtcZtliTKW_geQUEfTfstOdD&amp;s=10</string>
+    <string name="article2_body_1">Правильное восстановление влияет на результат не меньше, чем сама тренировка. Разбираем пять простых привычек, которые стоит взять за правило.</string>
+    <string name="article2_body_2">Растяжка, вода, белок в течение часа после нагрузки, полноценный сон и контроль пульса — база, с которой начинается прогресс без травм и выгорания.</string>
+    <string name="read_toggle_label">Прочитано</string>
+    <string name="back_to_first_article">Вернуться к первой статье</string>
 </resources>
