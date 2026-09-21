@@ -1,18 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@android:color/white"
     tools:context=".SecondActivity">
 
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:navigationIcon="@drawable/arrow_back"
+        android:title="Статья" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Игроки АПЛ, к которым стоит присмотреться"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Рассмотрим футболистов, которые могут стать интересными вариантами для фэнтези. Они активно участвуют в атаках своих команд и способны приносить очки за голы, передачи и другие результативные действия."
+                android:textSize="17sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/articleImage"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginTop="18dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/second_article"
+                android:contentDescription="Игроки АПЛ" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Эрлинг Холанд"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Нападающий остаётся одним из главных игроков атаки своей команды. Холанд регулярно создаёт опасные моменты и остаётся одним из самых очевидных кандидатов на результативные действия."
+                android:textSize="16sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Райан Шерки"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Шерки способен создавать моменты за счёт техники и передач. Он может быть полезен как при завершении атак, так и при создании голевых возможностей для партнёров."
+                android:textSize="16sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Йошко Гвардиол"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Гвардиол интересен тем, что способен приносить очки не только за игру в обороне. Он активно подключается вперёд и может участвовать в результативных атаках."
+                android:textSize="16sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Морган Гиббс-Уайт"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Гиббс-Уайт играет важную роль в атакующих действиях команды. Через него проходит много атак, поэтому он способен набирать очки благодаря голам и результативным передачам."
+                android:textSize="16sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@android:color/black" />
+
+            <Switch
+                android:id="@+id/readSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Прочитано"
+                android:textSize="17sp"
+                android:textColor="@android:color/black" />
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
