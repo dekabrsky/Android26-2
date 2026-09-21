@@ -1,4 +1,34 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
+    <string name="app_name">Две статьи</string>
     <string name="article_title">Статья</string>
+    <string name="share">Поделиться</string>
+    <string name="read">Прочитано</string>
+    <string name="next_article">Следующая статья</string>
+    <string name="article_read">Статья прочитана</string>
+    <string name="open_article">Открыть статью</string>
+    <string name="like">Лайк</string>
+    <string name="dislike">Дизлайк</string>
+    <string name="likes_count">Лайков: %1$d</string>
+    <string name="dislikes_count">Дизлайков: %1$d</string>
+    <string name="first_article_title">Как Android-приложение оживает</string>
+    <string name="first_article_subtitle">Короткая заметка о том, что происходит между нажатием на иконку и первым экраном.</string>
+    <string name="first_article_meta">Учебная статья • Jetpack Compose • 4 минуты</string>
+    <string name="first_article_image_description">Рабочее место Android-разработчика с телефоном и ноутбуком</string>
+    <string name="first_article_paragraph_1">Когда пользователь нажимает на иконку, Android создает Activity, вызывает ее жизненный цикл и передает управление вашему коду. В этот момент приложение еще ничего не показывает, но уже готовит окно, тему и первый экран.</string>
+    <string name="first_article_paragraph_2">В Compose интерфейс описывается как функция состояния. Если счетчик лайков меняется, фреймворк сам перерисовывает нужные элементы, а остальная часть экрана остается понятной и предсказуемой.</string>
+    <string name="first_article_paragraph_3">Хороший учебный экран не обязан быть сложным. Достаточно показать заголовок, изображение, несколько абзацев, простую интерактивность и аккуратные отступы.</string>
+    <string name="first_article_quote">Главная идея Android UI проста: экран должен честно отражать текущее состояние приложения.</string>
+    <string name="first_article_share_text">Как Android-приложение оживает: короткая статья о жизненном цикле Activity, Compose и состоянии интерфейса.</string>
+    <string name="second_article_title">Почему XML-разметка все еще полезна</string>
+    <string name="second_article_subtitle">Views помогают понять базовые строительные блоки Android-интерфейса.</string>
+    <string name="second_article_description">Небольшая статья про классические Views, ScrollView, TextView, ImageView и состояние «Прочитано».</string>
+    <string name="second_article_image_description">Схема мобильного экрана со слоями интерфейса</string>
+    <string name="second_article_paragraph_1">XML-разметка явно показывает дерево экрана: контейнеры, текст, изображения и отступы. Это удобно, когда нужно быстро увидеть структуру интерфейса без дополнительной архитектуры.</string>
+    <string name="second_article_paragraph_2">Views по-прежнему встречаются во многих проектах. Понимание Toolbar, ScrollView, TextView и ImageView помогает спокойно читать старый код и постепенно переносить его на новые подходы.</string>
+    <string name="second_article_paragraph_3">В этой практике вторая Activity возвращает результат первой. Такой обмен данными показывает, как Activity могут взаимодействовать без Navigation Component и сложных паттернов.</string>
+    <string name="second_article_quote">XML хорош для обучения: он делает границы каждого элемента видимыми.</string>
+    <string name="share_icon_description">Поделиться статьей</string>
+    <string name="like_icon_description">Поставить лайк</string>
+    <string name="dislike_icon_description">Поставить дизлайк</string>
+    <string name="article_icon_description">Иконка статьи</string>
 </resources>
