@@ -1,4 +1,47 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
     <string name="article_title">Статья</string>
+
+    <!-- Общее -->
+    <string name="share_action">Поделиться</string>
+    <string name="share_chooser_title">Поделиться статьёй</string>
+    <string name="article_feedback_question">Понравилась статья?</string>
+    <string name="like_button">👍 %1$d</string>
+    <string name="dislike_button">👎 %1$d</string>
+    <string name="related_label">Читайте также</string>
+    <string name="related_read_mark">✓ Прочитано</string>
+    <string name="related_open">Читать</string>
+    <string name="related_open_again">Перечитать</string>
+
+    <!-- Статья 1 (Compose) -->
+    <string name="article1_title">Тропа выходного дня: почему нам так нужны горы</string>
+    <string name="article1_lead">Несколько часов на маршруте отдыхают голову лучше, чем целый день на диване. Разбираемся, почему так происходит.</string>
+    <string name="article1_byline">Редакция DroidPractice · 3 мин чтения</string>
+    <string name="article1_image_caption">Горный луг ранним утром</string>
+    <string name="article1_image_description">Горный пейзаж: зелёные склоны и вершины на горизонте</string>
+    <string name="article1_h1">Тишина, которую слышно</string>
+    <string name="article1_p1">Город шумит даже ночью: гудят провода, хлопают двери, светятся экраны. В горах фон другой — ветер, вода, редкие птицы. Психологи называют такое состояние «мягким вниманием»: мозг не борется с раздражителями, а спокойно переключается между ними, и усталость постепенно отпускает.</string>
+    <string name="article1_h2">Маршрут по силам</string>
+    <!-- %1$s подставляется из article1_p2_highlight и выделяется жирным в Compose -->
+    <string name="article1_p2">Не нужно сразу покорять пятитысячники. Для первого выхода хватит тропы на %1$s с набором высоты в несколько сотен метров. Главное — удобная обувь, вода, тёплый слой одежды и запас времени, чтобы вернуться до темноты.</string>
+    <string name="article1_p2_highlight">5–8 километров</string>
+    <string name="article1_quote">Хороший маршрут — тот, после которого хочется пойти ещё раз.</string>
+    <string name="article1_quote_source">— из походного дневника</string>
+    <string name="article1_h3">Лёгкая голова</string>
+    <string name="article1_p3">На спуске приходит странное чувство: ноги гудят, а голова удивительно лёгкая. Именно ради него многие возвращаются на тропу снова и снова.</string>
+
+    <!-- Статья 2 (Views / XML) -->
+    <string name="article2_title">Утренняя долина: маршрут вдоль реки</string>
+    <string name="article2_lead">Лёгкая прогулка на полдня: ни крутых подъёмов, ни сложной навигации — только тропа, вода и туман.</string>
+    <string name="article2_byline">Редакция DroidPractice · 4 мин чтения</string>
+    <string name="article2_image_caption">Долина реки в утренней дымке</string>
+    <string name="article2_image_description">Речная долина среди холмов</string>
+    <string name="article2_h1">Выходим до рассвета</string>
+    <string name="article2_p1">Лучшее время для этой тропы — первый час после восхода. Над водой стелется туман, воздух прохладный и пахнет мокрой травой, а на тропе почти нет людей. Достаточно выйти из дома в пять утра — и к семи вы уже будете у первого брода.</string>
+    <string name="article2_quote">Река всегда знает дорогу — нужно только идти вдоль неё.</string>
+    <string name="article2_quote_source">— из походного дневника</string>
+    <string name="article2_h2">Что взять с собой</string>
+    <string name="article2_p2">Небольшой рюкзак, термос с чаем, лёгкий дождевик и сменные носки. Если планируете переходить брод, пригодятся сандалии или трекинговые кроссовки, которые не жалко намочить.</string>
+    <string name="article2_p3">На обратном пути не спешите: солнце уже поднялось, долина выглядит совсем иначе, и кажется, что вы прошли два разных маршрута.</string>
+    <string name="article2_read_switch">Прочитано</string>
 </resources>

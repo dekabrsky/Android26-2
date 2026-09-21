@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Цвета второй статьи (Views) -->
+    <color name="article_text">#FF1B1B1F</color>
+    <color name="article_muted">#FF6B6F76</color>
+    <color name="article_accent">#FF1E3A5F</color>
+    <color name="article_placeholder">#FFE3E7EB</color>
+    <color name="article_divider">#FFD5D9DD</color>
 </resources>
