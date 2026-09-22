@@ -2,9 +2,15 @@
 
 package ru.urfu.droidpractice1.content
 
+import android.R.attr.text
+import android.R.attr.title
+import android.content.Intent
 import android.icu.number.Scale
 import androidx.compose.animation.core.animateIntAsState
+import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,6 +28,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.ThumbUp
@@ -53,12 +60,14 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.VectorProperty
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -72,8 +81,16 @@ enum class Reaction { LIKE, DISLIKE, NONE }
 
 data class ReactionState(val reaction: Reaction, val counter: Int)
 
+val intent = Intent(Intent.ACTION_SEND).apply {
+    type = "text/plain"
+    putExtra(Intent.EXTRA_SUBJECT, title)
+    putExtra(Intent.EXTRA_TEXT, text)
+}
+
 @Composable
 fun MainActivityScreen() {
+    val context = LocalContext.current
+
     var reaction by rememberSaveable {
         mutableStateOf(Reaction.NONE)
     }
@@ -98,7 +115,7 @@ fun MainActivityScreen() {
                             )
 
                             IconButton(
-                                onClick = {},
+                                onClick = {context.startActivity(Intent.createChooser(intent, "Поделиться статьей"))},
                                 modifier = Modifier
                             ) {
                                 Icon(Icons.Default.Share, contentDescription = null)
@@ -136,7 +153,7 @@ fun MainActivityScreen() {
                         createdAt = "18-09-2026",
                         onLike = { val r = toggle(reaction, counter, Reaction.LIKE)
                                  counter = r.counter
-                                 reaction = r.reaction},
+                                 reaction = r.reaction },
                         onDislike = {val r = toggle(reaction, counter, Reaction.DISLIKE)
                             counter = r.counter
                             reaction = r.reaction },
@@ -160,6 +177,14 @@ fun MainActivityScreen() {
                 item {
                     TextBlock(
                         text = "Действующий контракт Ковача с Team Falcons продлится до 2028 года. Ранее другие деятели индустрии уже отмечали, что как индивидуальный перформер NiKo уже вряд ли проявит себя, пророча ему место капитана. Прочитать одно из мнений можно в материале."
+                    )
+                }
+
+                item {
+                    NextArticleBlock(
+                        title = "ZywOo: «StarLadder StarSeries Fall 2026 показал, что мы всё ещё одна из лучших команд»",
+                        date = "19-09-2026",
+                        onClick = {}
                     )
                 }
             }
@@ -201,7 +226,7 @@ fun QuoteBlock(text: String, author: String?, model: Any?, modifier: Modifier = 
         color = MaterialTheme.colorScheme.onSurface,
         textAlign = TextAlign.Start,
         fontStyle = FontStyle.Italic,
-        modifier = modifier
+        modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 8.dp)
     )
@@ -209,6 +234,7 @@ fun QuoteBlock(text: String, author: String?, model: Any?, modifier: Modifier = 
         modifier = modifier
             .fillMaxWidth()
             .padding(vertical = 12.dp)
+            .clip(RoundedCornerShape(16.dp))
             .background(Color(0xFFF5EFE6))
             .height(IntrinsicSize.Min)
             .padding(horizontal = 16.dp, vertical = 12.dp),
@@ -382,6 +408,74 @@ private fun ReactionButton(
             tint = if (active) activeColor else MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = modifier.size(22.dp),
         )
+    }
+}
+
+@Composable
+fun NextArticleBlock(
+    title: String,
+    date: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 24.dp),
+    ) {
+        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
+
+        Spacer(Modifier.height(16.dp))
+
+        Text(
+            text = "СЛЕДУЮЩАЯ СТАТЬЯ",
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            letterSpacing = 1.sp,
+            fontWeight = FontWeight.Medium,
+            modifier = Modifier.padding(start = 4.dp, bottom = 8.dp),
+        )
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(12.dp))
+                .background(MaterialTheme.colorScheme.surfaceVariant)
+                .clickable(onClick = onClick, indication = LocalIndication.current, interactionSource = remember { MutableInteractionSource() })
+                .padding(horizontal = 16.dp, vertical = 14.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Column(Modifier.weight(1f)) {
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                Spacer(Modifier.height(4.dp))
+                Text(
+                    text = date,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            }
+
+            Spacer(Modifier.width(12.dp))
+
+            Icon(
+                imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.size(22.dp),
+            )
+        }
+
+        Spacer(Modifier.height(16.dp))
+
+        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
     }
 }
 
