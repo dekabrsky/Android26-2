@@ -1,18 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".SecondActivity">
+    android:background="#FAF8F3"
+    android:orientation="vertical">
 
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:title="@string/article_title"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#E4EBE4"
+        android:title="@string/app_name"
+        android:titleTextColor="#233C32"
+        android:navigationContentDescription="@string/back"
         android:navigationIcon="@drawable/arrow_back" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                style="@style/ArticleText"
+                android:text="@string/second_category"
+                android:textColor="#426451"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/ArticleText"
+                android:text="@string/second_title"
+                android:fontFamily="serif"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/ArticleText"
+                android:text="@string/second_intro"
+                android:textSize="19sp" />
+
+            <ImageView
+                android:id="@+id/articleImage"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/second_image_description"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mountain_placeholder" />
+
+            <TextView
+                style="@style/ArticleText"
+                android:text="@string/second_caption"
+                android:textSize="12sp"
+                android:gravity="end" />
+
+            <TextView
+                style="@style/ArticleText"
+                android:text="@string/second_heading"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/ArticleText"
+                android:text="@string/second_body" />
+
+            <TextView
+                style="@style/ArticleText"
+                android:background="#E4EBE4"
+                android:padding="20dp"
+                android:gravity="center"
+                android:fontFamily="serif"
+                android:text="@string/second_quote"
+                android:textSize="22sp"
+                android:textStyle="italic" />
+
+            <TextView
+                style="@style/ArticleText"
+                android:text="@string/second_end_heading"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/ArticleText"
+                android:text="@string/second_end" />
+
+            <Switch
+                android:id="@+id/readSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:padding="12dp"
+                android:background="#E4EBE4"
+                android:text="@string/mark_read"
+                android:textColor="#233C32"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

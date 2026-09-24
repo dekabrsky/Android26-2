@@ -1,4 +1,34 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="app_name">Выше облаков</string>
+    <string name="first_category">ПУТЕШЕСТВИЯ · 3 МИНУТЫ</string>
+    <string name="first_title">Утро, которое начинается в горах</string>
+    <string name="first_intro">Иногда лучший способ замедлиться — выйти на тропу и оставить привычный шум далеко внизу.</string>
+    <string name="first_heading">Дорога важнее вершины</string>
+    <string name="first_body">На рассвете горы кажутся почти неподвижными. Только свет медленно спускается по склонам, а туман прячет изгибы тропы. Шаг за шагом открываются детали, которые легко пропустить в спешке: капли на траве, тёмные силуэты елей и отражение неба в небольшом озере.\n\nДля первого знакомства с горами не нужна высокая вершина. Короткий маршрут позволяет почувствовать ритм пути, остановиться у красивого вида и вернуться с ощущением маленького открытия.</string>
+    <string name="first_quote">«Самая запоминающаяся часть путешествия часто случается на обычной остановке по дороге».</string>
+    <string name="first_end">Мы дошли до смотровой площадки как раз в тот момент, когда облака разошлись. Чай из термоса оказался вкуснее любого городского завтрака. Хотелось просто смотреть и никуда не торопиться.\n\nТакая прогулка начинается задолго до первого шага — со сборов. О том, как мы собираем рюкзак для одного дня, рассказываем в следующей статье.</string>
+    <string name="first_caption">Свет, тишина и горные хребты · Фото: Unsplash</string>
+    <string name="first_image_description">Горные вершины под облачным небом</string>
+    <string name="first_image_url" translatable="false">https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&amp;q=85&amp;fit=crop</string>
+    <string name="second_image_url" translatable="false">https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1200&amp;q=85&amp;fit=crop</string>
+    <string name="rate_article">Как вам статья?</string>
+    <string name="likes">Лайк · %1$d</string>
+    <string name="dislikes">Дизлайк · %1$d</string>
+    <string name="share_article">Поделиться статьёй</string>
+    <string name="read_next">ЧИТАЙТЕ ДАЛЬШЕ</string>
+    <string name="second_title">Один день и один рюкзак</string>
+    <string name="read">Прочитано ✓</string>
+    <string name="not_read">Ещё не прочитано</string>
+    <string name="open_article">Открыть статью →</string>
+    <string name="back">Назад</string>
+    <string name="second_category">ЗАМЕТКИ С ТРОПЫ · 2 МИНУТЫ</string>
+    <string name="second_intro">Небольшой рюкзак напоминает: для хорошего дня нужно не так много вещей, зато у каждой должно быть своё место.</string>
+    <string name="second_image_description">Горный пейзаж вдоль маршрута</string>
+    <string name="second_caption">Новый маршрут начинается со сборов · Фото: Unsplash</string>
+    <string name="second_heading">Собираемся с вечера</string>
+    <string name="second_body">На столе лежат термос, перекус, лёгкая куртка и карта. Мы раскладываем вещи так, чтобы утром не искать каждую по отдельности. То, что понадобится на остановке, отправляется наверх, а небольшие предметы — в отдельный карман.\n\nВ рюкзаке остаётся немного свободного места. Оно пригодится для куртки, когда солнце поднимется выше и прохладное утро сменится тёплым днём.</string>
+    <string name="second_quote">Меньше суеты на старте — больше времени замечать всё вокруг.</string>
+    <string name="second_end_heading">Оставляем место впечатлениям</string>
+    <string name="second_end">На обратном пути в блокноте появляется несколько строк о прогулке. Рядом — набросок хребта и название места, куда хочется вернуться. Рюкзак стал чуть легче, а день — заметно полнее.\n\nЕсли дочитали историю, отметьте её ниже. На первой странице появится статус «Прочитано».</string>
+    <string name="mark_read">Прочитано</string>
 </resources>
