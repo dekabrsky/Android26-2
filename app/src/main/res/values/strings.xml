@@ -1,4 +1,23 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="app_name">Две статьи</string>
+    <string name="article_title">Топ-10 голов чемпионата России</string>
+    <string name="article_subtitle">Обзор самых красивых мячей сезона</string>
+    <string name="article_image_url">https://www.pnp.ru/upload/entities/2026/08/12/18/article/detailPicture/af/5f/07/c9/8bd0db45549a84a474361c803f4fbb92.webp</string>
+    <string name="article_lead">Сезон выдался на редкость щедрым на красивые голы. Мы выбрали десять лучших мячей чемпионата России — от дальних ударов до эффектных комбинаций.</string>
+    <string name="article_quote">«Гол — это не просто счёт на табло, это маленький спектакль, который команда репетирует на каждой тренировке»</string>
+    <string name="article_body">Десятое место занимает удар со штрафного в матче третьего тура — мяч красиво изогнулся в дальний угол. На девятом месте эффектная комбинация с участием четырёх игроков, завершённая прострелом в штрафную.\n\nВ середине рейтинга — сольный проход через полполя и удар в дальнюю девятку. Тройку лучших открывает акробатический удар через себя: такой выполняют единицы, а получается он и того реже.\n\nВторое место занимает командная атака с восемью пасами за один эпизод — от вратаря до сетки ворот прошло меньше двадцати секунд. А победителем стал дальний удар с 35 метров на последней добавленной минуте матча.</string>
+    <string name="article_share">Поделиться</string>
+    <string name="article_likes">Лайки</string>
+    <string name="article_dislikes">Дизлайки</string>
+    <string name="article_read_also">Читайте также</string>
+    <string name="article_read_also_title">Как тренируются бомбардиры</string>
+    <string name="article_read_also_subtitle">Разбираем ежедневную рутину лучших нападающих лиги</string>
+    <string name="article_read_label">Прочитано</string>
+    <string name="article_read_done">Вы уже прочитали вторую статью</string>
+    <string name="second_title">Как тренируются бомбардиры</string>
+    <string name="second_subtitle">Разбираем ежедневную рутину лучших нападающих лиги</string>
+    <string name="second_image_url">https://www.rusfootball.info/uploads/posts/2025-05/1747667425_sbornaya-rossii-vmeste-rfs.jpg</string>
+    <string name="second_lead">Забивать голы — это навык, который складывается из сотен повторений. Мы посмотрели, как устроен типичный тренировочный день форварда.</string>
+    <string name="second_body">Утро начинается с разминки и работы с мячом: нападающие отрабатывают удары с разных точек штрафной — по сто повторений каждой позиции. Затем идёт тактическая работа с тренером: разбор записей матчей и тренировочных эпизодов.\n\nПосле обеда — занятия в тренажёрном зале. Основной упор делается на взрывную силу ног и корпуса, ведь рывок на пару метров часто решает эпизод.\n\nЗавершается день двусторонней игрой на половине поля, где форварды отрабатывают взаимодействия с полузащитниками.</string>
+    <string name="second_read_switch">Прочитано</string>
 </resources>
