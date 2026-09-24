@@ -47,6 +47,13 @@
                 android:textColor="?android:attr/textColorSecondary"
                 android:layout_marginBottom="16dp" />
 
+            <CheckBox
+                android:id="@+id/readCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mark_as_read"
+                android:textSize="16sp" />
+
             <ImageView
                 android:id="@+id/articleCover"
                 android:layout_width="match_parent"
@@ -128,9 +135,9 @@
                 android:textColor="?android:attr/textColorPrimary"
                 android:layout_marginBottom="12dp" />
 
-
         </LinearLayout>
 
     </ScrollView>
+
 
 </LinearLayout>

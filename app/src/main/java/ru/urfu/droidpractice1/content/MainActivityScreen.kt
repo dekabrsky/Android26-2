@@ -4,8 +4,11 @@ package ru.urfu.droidpractice1.content
 
 import android.R.attr.text
 import android.R.attr.title
+import android.app.Activity
 import android.content.Intent
 import android.icu.number.Scale
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.core.animateIntAsState
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
@@ -84,8 +87,8 @@ data class ReactionState(val reaction: Reaction, val counter: Int)
 
 val intent = Intent(Intent.ACTION_SEND).apply {
     type = "text/plain"
-    putExtra(Intent.EXTRA_SUBJECT, title)
-    putExtra(Intent.EXTRA_TEXT, text)
+    putExtra(Intent.EXTRA_SUBJECT, "Поделиться")
+    putExtra(Intent.EXTRA_TEXT, "NiKo может закончить карьеру: «В ближайшие несколько лет мне нужно сделать выбор»")
 }
 
 @Composable
@@ -98,6 +101,16 @@ fun MainActivityScreen() {
 
     var counter by rememberSaveable {
         mutableStateOf(0)
+    }
+
+    var isRead by remember { mutableStateOf(false) }
+
+    val launcher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.StartActivityForResult(),
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            isRead = result.data?.getBooleanExtra("is_read", false) ?: false
+        }
     }
 
     DroidPractice1Theme {
@@ -185,9 +198,12 @@ fun MainActivityScreen() {
                     NextArticleBlock(
                         title = "ZywOo: «StarLadder StarSeries Fall 2026 показал, что мы всё ещё одна из лучших команд»",
                         date = "19-09-2026",
+                        isRead = isRead,
                         onClick = {
-                            val intent = Intent(context, SecondActivity::class.java)
-                            context.startActivity(intent)
+                            val intent = Intent(context, SecondActivity::class.java).apply {
+                                putExtra("is_read", isRead)
+                            }
+                            launcher.launch(intent)
                         }
                     )
                 }
@@ -419,6 +435,7 @@ private fun ReactionButton(
 fun NextArticleBlock(
     title: String,
     date: String,
+    isRead: Boolean,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -453,7 +470,7 @@ fun NextArticleBlock(
                 Text(
                     text = title,
                     style = MaterialTheme.typography.titleMedium,
-                    color = MaterialTheme.colorScheme.onSurface,
+                    color = if (!isRead) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.outlineVariant,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                 )

@@ -1,7 +1,9 @@
 package ru.urfu.droidpractice1
 
+import android.content.Intent
 import androidx.activity.ComponentActivity
 import android.os.Bundle
+import android.widget.CheckBox
 import android.widget.ImageView
 import coil3.load
 import coil3.request.crossfade
@@ -22,6 +24,17 @@ class SecondActivity : ComponentActivity() {
         val cover = findViewById<ImageView>(R.id.articleCover)
         cover.load("https://images.cybersport.ru/images/material-card/plain/61/6161771e-e0f0-429f-b667-5cd9bf57ebeb.jpg") {
             crossfade(true)
+        }
+
+        val checkbox = findViewById<CheckBox>(R.id.readCheckbox)
+
+        checkbox.isChecked = intent.getBooleanExtra("is_read", false)
+
+        checkbox.setOnCheckedChangeListener { _, isChecked ->
+            val resultIntent = Intent().apply {
+                putExtra("is_read", isChecked)
+            }
+            setResult(RESULT_OK, resultIntent)
         }
     }
 }
