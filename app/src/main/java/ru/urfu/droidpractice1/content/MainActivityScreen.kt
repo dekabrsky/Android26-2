@@ -73,6 +73,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import ru.urfu.droidpractice1.R
+import ru.urfu.droidpractice1.SecondActivity
 import ru.urfu.droidpractice1.ui.theme.ArticleTextStyles
 import ru.urfu.droidpractice1.ui.theme.DroidPractice1Theme
 
@@ -184,7 +185,10 @@ fun MainActivityScreen() {
                     NextArticleBlock(
                         title = "ZywOo: «StarLadder StarSeries Fall 2026 показал, что мы всё ещё одна из лучших команд»",
                         date = "19-09-2026",
-                        onClick = {}
+                        onClick = {
+                            val intent = Intent(context, SecondActivity::class.java)
+                            context.startActivity(intent)
+                        }
                     )
                 }
             }

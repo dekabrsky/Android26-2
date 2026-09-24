@@ -12,7 +12,125 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:navigationIcon="@drawable/arrow_back"
+        android:title="@string/article_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/colorBackground"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/articleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/article2_title"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/articleMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/article_meta"
+                android:textSize="14sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_marginBottom="16dp" />
+
+            <ImageView
+                android:id="@+id/articleCover"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/article_cover_desc"
+                android:background="@drawable/quote_background"
+                android:clipToOutline="true"
+                android:outlineProvider="background"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/articleParagraph1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/article_paragraph_1"
+                android:textSize="17sp"
+                android:lineSpacingMultiplier="1.5"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/articleParagraph2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Публикуется с сохранением орфографии и пунктуации источника"
+                android:textSize="17sp"
+                android:textStyle="italic"
+                android:lineSpacingMultiplier="1.5"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:id="@+id/articleQuote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/quote_background"
+                android:padding="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:minHeight="40dp"
+                    android:background="@color/quote_accent"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:id="@+id/articleQuoteText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/article_quote"
+                    android:textSize="17sp"
+                    android:textStyle="italic"
+                    android:lineSpacingMultiplier="1.5"
+                    android:textColor="?android:attr/textColorPrimary" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/articleParagraph3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/article_paragraph_3"
+                android:textSize="17sp"
+                android:lineSpacingMultiplier="1.5"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/articleParagraph4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/article_paragraph_4"
+                android:textSize="17sp"
+                android:lineSpacingMultiplier="1.5"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="12dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
