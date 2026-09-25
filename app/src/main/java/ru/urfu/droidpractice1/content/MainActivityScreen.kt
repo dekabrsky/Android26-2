@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LargeTopAppBar
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MediumTopAppBar
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -34,7 +35,8 @@ fun MainActivityScreen() {
                 TopAppBar(
                     title = {
                         Text(
-                            text = stringResource(id = R.string.article_title)
+                            text = stringResource(R.string.article_title),
+                            style = MaterialTheme.typography.titleLarge
                         )
                     }
                 )
@@ -42,10 +44,14 @@ fun MainActivityScreen() {
             Column (
                 modifier = Modifier.padding(innerPadding)
             ) {
-                Text (text = stringResource(R.string.block_text1))
+                Text (
+                    text = stringResource(R.string.block_text1),
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.tertiary
+                )
                 AsyncImage(
-                    model = "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/%D0%93%D0%B0%D1%82%D1%87%D0%B8%D0%BD%D0%B0._%D0%A3%D0%BB%D0%B8%D1%86%D0%B0_%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B0%D1%80%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C_28.jpg/330px-%D0%93%D0%B0%D1%82%D1%87%D0%B8%D0%BD%D0%B0._%D0%A3%D0%BB%D0%B8%D1%86%D0%B0_%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B0%D1%80%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C_28.jpg?utm_source=ru.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
-                    contentDescription = "Фотография дома первого поколения советского типового индустриального домостроения",
+                    model = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKo6naf1Pbx8Zyg2Ofwbj-uM9nkrsvO9lZQ-V0oifnMQ&s=10",
+                    contentDescription = "Фотография дома первого поколения советского типового индустриального домостроения, \"Хрущёвка\"",
                     modifier = Modifier.fillMaxWidth(),
                     contentScale = ContentScale.Crop,
                     placeholder = painterResource(R.drawable.image_line_icon),
