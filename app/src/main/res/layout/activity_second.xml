@@ -1,18 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".SecondActivity">
+    android:orientation="vertical">
 
-    <Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/colorBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Правила в фигурном катании"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="От индивидуальных программ до синхронного катания"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_marginBottom="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/figure_skating"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Фигурист" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Правила зависят от разновидности фигурного катания: индивидуальное женское, индивидуальное мужское, парное фигурное катание, а также парные танцы на льду."
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Индивидуальное катание"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="В индивидуальном катании мужчины и женщины обязаны откатать две программы – короткую и произвольную. За короткую программу, которая может длиться до 2 минут 40-50 секунд, фигуристы обязаны представить 8 обязательных элементов (двойной или тройной Аксель, тройной или четверной прыжок, одна комбинация прыжков, несколько разных типов вращений и две дорожки шагов) в любом порядке. За отсутствие одного из элементов следует штраф."
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Произвольная программа почти в два раза дольше короткой, она занимает 4 с половиной минуты у мужчин и 4 минуты у женщин. Фигуристы стремятся включить в свою программу самые сложные элементы (за которые можно получить больше баллов)."
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Парное фигурное катание"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E3F2FD"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="В парном фигурном катании правила очень схожи с индивидуальными, разница лишь в обязательных элементах. Так, обязательными элементами для пар являются поддержки (партнер поднимает партнершу), прыжки с выбросом (когда партнер кидает партнершу), а также синхронные прыжки и вращение."
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:lineSpacingMultiplier="1.3" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Танцы на льду"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="А вот программа танцоров несколько отличается. Они должны исполнить обязательный, произвольный и оригинальный танцы. Обязательный танец всем фигуристам дается один и тот же, с набором обязательных элементов. Затем следует оригинальный танец, в котором всем участникам дают определенную тему для вариаций, а уж они должны интерпретировать ее, как сочтут нужным."
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ну а всю свою фантазию, талант и мастерство танцоры могут показать в произвольной программе. Здесь и музыку, и костюмы, и движения выбирают сами фигуристы, поэтому и очков за него дают больше всего – 50 %."
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Синхронное катание"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Есть ещё синхронное катание, в котором одновременно за одну команду выступает от 16 до 20 фигуристов. Цель дисциплины – выступление команды как единого целого. Техника, скольжение, элементы в синхронном катании полностью соответствуют классическому фигурному катанию. В синхронном катании есть свои особенные обязательные элементы, такие как: круг, линия, колесо, пересечения, блоки."
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Прыжки"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Прыжки в фигурном катании разделяются на две группы — рёберные и носковые (зубцовые), в зависимости от того, какой частью конька происходит толчок. Сейчас фигуристы выполняют 6 видов прыжков — тулуп, сальхов, риттбергер, флип, лутц и аксель."
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="1.3"
+                android:layout_marginBottom="24dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Прочитано"
+                    android:textSize="18sp" />
+
+                <Switch
+                    android:id="@+id/switch_read"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
