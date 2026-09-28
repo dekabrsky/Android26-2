@@ -1,7 +1,10 @@
 package ru.urfu.droidpractice1
 
-import androidx.activity.ComponentActivity
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
+import androidx.activity.ComponentActivity
+import coil.load
 import ru.urfu.droidpractice1.databinding.ActivitySecondBinding
 
 class SecondActivity : ComponentActivity() {
@@ -15,5 +18,22 @@ class SecondActivity : ComponentActivity() {
         setContentView(view)
 
         binding.toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
+
+        binding.image.load(getString(R.string.second_article_image))
+
+        val alreadyRead = intent.getBooleanExtra(EXTRA_IS_READ, false)
+        binding.readSwitch.isChecked = alreadyRead
+
+        binding.readSwitch.setOnCheckedChangeListener { _, isChecked ->
+            setResult(
+                Activity.RESULT_OK,
+                Intent().putExtra(EXTRA_IS_READ, isChecked)
+            )
+        }
+
+        setResult(
+            Activity.RESULT_OK,
+            Intent().putExtra(EXTRA_IS_READ, binding.readSwitch.isChecked)
+        )
     }
 }
