@@ -15,4 +15,69 @@
         android:title="@string/article_title"
         android:navigationIcon="@drawable/arrow_back" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/second_article_heading"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:gravity="start" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/second_article_body"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:gravity="start"
+                android:lineSpacingMultiplier="1.2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/read_switch"
+                    android:textSize="16sp"
+                    android:textColor="@color/black" />
+
+                <Switch
+                    android:id="@+id/readSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
