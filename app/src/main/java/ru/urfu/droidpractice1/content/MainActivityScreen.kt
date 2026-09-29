@@ -4,6 +4,7 @@ package ru.urfu.droidpractice1.content
 
 import android.content.Context
 import android.content.Intent
+import android.provider.CalendarContract
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -20,6 +21,7 @@ import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -41,6 +43,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
@@ -82,7 +85,6 @@ fun MainActivityScreen(articleViewModel: ArticleViewModel = viewModel()) {
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME) {
                 isRead = sharedPrefs.getBoolean(isArticleRead, false)
-
             }
         }
 
@@ -206,15 +208,20 @@ fun MainActivityScreen(articleViewModel: ArticleViewModel = viewModel()) {
 fun NavigateToXmlActivityButton(isRead: Boolean) {
     val context = LocalContext.current
 
-    Button(onClick = {
-        val intent = Intent(context, SecondActivity::class.java)
-
-        context.startActivity(intent)
-    }) {
-        Text(
-            text = if (isRead) "Прочитано (Открыть)" else stringResource(R.string.article2_button_name)
+    Button(
+        onClick = {
+            val intent = Intent(context, SecondActivity::class.java)
+            context.startActivity(intent)
+        },
+        colors = ButtonDefaults.buttonColors(
+            containerColor = if (isRead) Color.Gray else MaterialTheme.colorScheme.primary,
+            contentColor = if (isRead) Color.White else MaterialTheme.colorScheme.onPrimary
         )
-}
+    ) {
+        Text(
+            text = stringResource(R.string.article2_button_name)
+        )
+    }
 }
 
 @Composable
