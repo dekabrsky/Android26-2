@@ -73,9 +73,16 @@
                 android:textColor="@color/black"
                 android:layout_margin="10dp"
                 />
+
+            <Switch
+                android:id="@+id/switchIsReaded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Прочитано"
+                />
+
+
         </LinearLayout>
-
-
 
     </ScrollView>
 

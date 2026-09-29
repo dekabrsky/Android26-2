@@ -2,6 +2,7 @@
 
 package ru.urfu.droidpractice1.content
 
+import android.content.Context
 import android.content.Intent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -30,18 +31,27 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import ru.urfu.droidpractice1.R
@@ -57,6 +67,31 @@ fun MainActivityScreen(articleViewModel: ArticleViewModel = viewModel()) {
     val scrollState = rememberScrollState()
 
     val uiState by articleViewModel.uiState.collectAsState()
+
+    val context = LocalContext.current
+    val lifecycleOwner = LocalLifecycleOwner.current
+    val isArticleRead = "is_article_read"
+
+    val sharedPrefs = remember {
+        context.getSharedPreferences("app_settings", Context.MODE_PRIVATE)
+    }
+
+    var isRead by remember { mutableStateOf(sharedPrefs.getBoolean(isArticleRead, false)) }
+
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                isRead = sharedPrefs.getBoolean(isArticleRead, false)
+
+            }
+        }
+
+        lifecycleOwner.lifecycle.addObserver(observer)
+
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(observer)
+        }
+    }
 
     DroidPractice1Theme {
         Scaffold(
@@ -161,14 +196,14 @@ fun MainActivityScreen(articleViewModel: ArticleViewModel = viewModel()) {
 
                 Spacer(modifier = Modifier.height(15.dp))
 
-                NavigateToXmlActivityButton()
+                NavigateToXmlActivityButton(isRead)
             }
         }
     }
 }
 
 @Composable
-fun NavigateToXmlActivityButton() {
+fun NavigateToXmlActivityButton(isRead: Boolean) {
     val context = LocalContext.current
 
     Button(onClick = {
@@ -176,7 +211,9 @@ fun NavigateToXmlActivityButton() {
 
         context.startActivity(intent)
     }) {
-        Text(text = stringResource(R.string.article2_button_name))
+        Text(
+            text = if (isRead) "Прочитано (Открыть)" else stringResource(R.string.article2_button_name)
+        )
 }
 }
 

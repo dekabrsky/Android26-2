@@ -1,8 +1,10 @@
 package ru.urfu.droidpractice1
 
+import android.content.Context
 import androidx.activity.ComponentActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.Switch
 import coil.load
 import ru.urfu.droidpractice1.databinding.ActivitySecondBinding
 
@@ -25,6 +27,17 @@ class SecondActivity : ComponentActivity() {
             crossfade(true)
             placeholder(R.drawable.image_line_icon)
             error(R.drawable.error_image_photo_icon)
+        }
+
+        val isArticleRead = "is_article_read"
+        val switchRead = findViewById<Switch>(R.id.switchIsReaded)
+        val sharedPrefs = getSharedPreferences("app_settings", Context.MODE_PRIVATE)
+        switchRead.isChecked = sharedPrefs.getBoolean(isArticleRead, false)
+
+        switchRead.setOnCheckedChangeListener { _, isChecked ->
+            sharedPrefs.edit()
+                .putBoolean(isArticleRead, isChecked)
+                .apply()
         }
     }
 }
