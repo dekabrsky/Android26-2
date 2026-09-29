@@ -39,23 +39,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/article2_block1"
-                android:textSize="22sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:layout_margin="10dp"
                 />
 
             <ImageView
                 android:id="@+id/article2Image"
-                android:layout_width="wrap_content"
-                android:layout_height="250dp"
-                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
                 android:contentDescription="Двухэтажная «сталинка» серии 1-201"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="10dp"
                 />
 
-
+            <TextView
+                android:id="@+id/textViewBlock2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/article2_block2"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                />
         </LinearLayout>
 
 

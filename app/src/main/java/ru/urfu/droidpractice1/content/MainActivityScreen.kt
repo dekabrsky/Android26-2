@@ -167,7 +167,7 @@ fun NavigateToXmlActivityButton() {
         context.startActivity(intent)
     }) {
         Text(text = stringResource(R.string.article2_button_name))
-    }
+}
 }
 
 @Composable
