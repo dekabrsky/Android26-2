@@ -12,7 +12,78 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:navigationIcon="@drawable/arrow_back"
+        android:title="@string/article_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/article2_title"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewBlock1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/article2_block1"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/article2Image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/article2_image_description"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/article2_image_description"
+                android:textSize="11sp"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/textViewBlock2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/article2_block2"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                />
+
+            <Switch
+                android:id="@+id/switchIsReaded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Прочитано"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
