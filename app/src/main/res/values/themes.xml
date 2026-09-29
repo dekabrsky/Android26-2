@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.DroidPractice1" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.DroidPractice1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">#0F172A</item>
+        <item name="android:statusBarColor">#0F172A</item>
+        <item name="colorPrimary">#60A5FA</item>
+        <item name="colorSurface">#1E293B</item>
+        <item name="colorOnSurface">#F1F5F9</item>
+    </style>
 </resources>
