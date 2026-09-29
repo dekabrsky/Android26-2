@@ -50,8 +50,18 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:contentDescription="Двухэтажная «сталинка» серии 1-201"
+                android:contentDescription="@string/article2_image_description"
                 android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/article2_image_description"
+                android:textSize="11sp"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:gravity="center"
                 />
 
             <TextView

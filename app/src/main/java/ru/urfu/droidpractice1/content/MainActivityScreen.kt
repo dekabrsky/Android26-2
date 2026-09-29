@@ -39,6 +39,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -92,11 +93,20 @@ fun MainActivityScreen(articleViewModel: ArticleViewModel = viewModel()) {
 
                 AsyncImage(
                     model = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKo6naf1Pbx8Zyg2Ofwbj-uM9nkrsvO9lZQ-V0oifnMQ&s=10",
-                    contentDescription = "Фотография дома первого поколения советского типового индустриального домостроения, \"Хрущёвка\"",
+                    contentDescription = stringResource(R.string.article1_image_description),
                     modifier = Modifier.fillMaxWidth(),
                     contentScale = ContentScale.Crop,
                     placeholder = painterResource(R.drawable.image_line_icon),
                     error = painterResource(R.drawable.error_image_photo_icon)
+                )
+
+                Spacer(modifier = Modifier.height(5.dp))
+
+                Text (
+                    text = stringResource(R.string.article1_image_description),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.secondary,
+                    textAlign = TextAlign.Center
                 )
 
                 Spacer(modifier = Modifier.height(10.dp))
