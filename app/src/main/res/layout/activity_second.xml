@@ -1,18 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SecondActivity">
+    android:background="#0F172A">
 
-    <Toolbar
+    <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0F172A"
+        app:title="Финансовый Вестник"
+        app:titleTextColor="#F1F5F9"
+        app:navigationIcon="@android:drawable/ic_menu_revert"
+        app:navigationIconTint="#F1F5F9" />
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Индекс Мосбиржи вышел в плюс на новостях о возможном смягчении санкций"
+                android:textColor="#F1F5F9"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Автор: Валентина Гаврикова • 4 мин чтения"
+                android:textColor="#64748B"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:id="@+id/articleImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_gallery" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="6sp"
+                android:text="Индекс Мосбиржи резко вырос, выйдя в плюс, после того как появилось сообщение The Atlantic о том, что Дональд Трамп согласился с идеей своего спецпосланника в Восточной Европе Джона Коула об ослаблении антироссийских санкций в обмен на освобождение Россией некоторых заключенных."
+                android:textColor="#F1F5F9"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="6sp"
+                android:text="Российский индикатор за две минуты вырос на 1,08% и на пике достиг 2260,51 пункта, свидетельствуют данные торгов на 14:51 мск. По сравнению с закрытием торгов в понедельник прирост составил 0,63%. До появления новости индекс терял 0,45%, торгуясь на отметке 2236,28 пункта."
+                android:textColor="#F1F5F9"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="6sp"
+                android:text="Реализация плана, по данным The Atlantic, поможет сразу нескольким целям Трампа: реинтеграции России в мировую экономику, расширению переговоров США и России за пределы конфликта на Украине, а также даст шанс для Вашингтона на заключение выгодных сделок с Москвой, касающихся российской нефти, дизельного топлива, редкоземельных минералов и других товаров."
+                android:textColor="#F1F5F9"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="6sp"
+                android:text="В то же время такой подход, вероятно, вызовет недовольство со стороны властей Украины и европейских стран, а также части союзников Трампа в конгрессе, прогнозирует издание."
+                android:textColor="#F1F5F9"
+                android:textSize="16sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="#1E293B"
+                app:cardCornerRadius="12dp"
+                app:strokeWidth="0dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:lineSpacingExtra="4sp"
+                    android:text="«Инициатива находится на ранней стадии и сама по себе не означает скорого снятия ограничений, поэтому реакция рынка носит скорее спекулятивный характер.»\n\n— Василий Карпунин, «Альфа-Инвестиции»"
+                    android:textColor="#60A5FA"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="6sp"
+                android:text="Поддержку бенчмарку также могли оказать и другие геополитические новости. Так, по информации источников Reuters, спецпредставитель президента России Кирилл Дмитриев провел накануне «конструктивную» встречу с официальными лицами США по мирному урегулированию конфликта на Украине. Кроме того, обсуждались возможные энергетические инициативы после окончания конфликта."
+                android:textColor="#F1F5F9"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="6sp"
+                android:text="Визит Дмитриева состоялся после встречи президента Дональда Трампа и президента Украины Владимира Зеленского на прошлой неделе в Нью-Йорке, в рамках которой они обсуждали потенциальное прекращение огня по целям, связанным с энергетикой."
+                android:textColor="#F1F5F9"
+                android:textSize="16sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/readCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="#1E293B"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="#334155"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/readStatusIcon"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@android:drawable/checkbox_off_background"
+                        app:tint="#64748B" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/readStatusTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Прочитано"
+                            android:textColor="#F1F5F9"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/readStatusSubtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Нажмите, чтобы отметить прогресс"
+                            android:textColor="#64748B"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/readSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:useMaterialThemeColors="true" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>
