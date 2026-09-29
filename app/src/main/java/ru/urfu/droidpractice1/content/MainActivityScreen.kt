@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import ru.urfu.droidpractice1.R
+import ru.urfu.droidpractice1.SecondActivity
 import ru.urfu.droidpractice1.model.ArticleViewModel
 import ru.urfu.droidpractice1.ui.theme.DroidPractice1Theme
 
@@ -87,7 +88,7 @@ fun MainActivityScreen(articleViewModel: ArticleViewModel = viewModel()) {
                     color = MaterialTheme.colorScheme.secondary
                 )
 
-                Spacer(Modifier.height(10.dp))
+                Spacer(modifier = Modifier.height(10.dp))
 
                 AsyncImage(
                     model = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKo6naf1Pbx8Zyg2Ofwbj-uM9nkrsvO9lZQ-V0oifnMQ&s=10",
@@ -98,7 +99,7 @@ fun MainActivityScreen(articleViewModel: ArticleViewModel = viewModel()) {
                     error = painterResource(R.drawable.error_image_photo_icon)
                 )
 
-                Spacer(Modifier.height(10.dp))
+                Spacer(modifier = Modifier.height(10.dp))
 
                 Text (
                     text = articleText2,
@@ -106,7 +107,7 @@ fun MainActivityScreen(articleViewModel: ArticleViewModel = viewModel()) {
                     color = MaterialTheme.colorScheme.secondary
                 )
 
-                Spacer(Modifier.height(25.dp))
+                Spacer(modifier = Modifier.height(25.dp))
 
                 Text (
                     text = articleText3,
@@ -114,7 +115,7 @@ fun MainActivityScreen(articleViewModel: ArticleViewModel = viewModel()) {
                     color = MaterialTheme.colorScheme.secondary
                 )
 
-                Spacer(Modifier.height(25.dp))
+                Spacer(modifier = Modifier.height(15.dp))
 
                 Row(
                     modifier = Modifier.padding(16.dp),
@@ -147,8 +148,25 @@ fun MainActivityScreen(articleViewModel: ArticleViewModel = viewModel()) {
                     }
                     Text(text = uiState.dislikesCount.toString())
                 }
+
+                Spacer(modifier = Modifier.height(15.dp))
+
+                NavigateToXmlActivityButton()
             }
         }
+    }
+}
+
+@Composable
+fun NavigateToXmlActivityButton() {
+    val context = LocalContext.current
+
+    Button(onClick = {
+        val intent = Intent(context, SecondActivity::class.java)
+
+        context.startActivity(intent)
+    }) {
+        Text(text = stringResource(R.string.article2_button_name))
     }
 }
 
