@@ -3,6 +3,14 @@
     <color name="news_pink">#FFFF3D67</color>
     <color name="news_pink_dark">#FFD81B4E</color>
     <color name="news_background">#FFF7F7F9</color>
+    <color name="news_toolbar">#FFF1F1F3</color>
+    <color name="news_preview">#FF3E3E43</color>
+    <color name="news_date">#FF77777E</color>
+    <color name="news_quote_text">#FF55555C</color>
+    <color name="news_quote_background">#FFFFE8EE</color>
+    <color name="news_divider">#FFE0E0E4</color>
+    <color name="news_button_dark">#FF2F2F35</color>
+    <color name="news_switch_track">#FFFFC1CF</color>
     <color name="news_text">#FF27272A</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

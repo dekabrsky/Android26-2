@@ -1,5 +1,6 @@
 package ru.urfu.droidpractice1.content
 
+import android.app.Activity.RESULT_OK
 import android.content.Context
 import android.content.Intent
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -49,6 +50,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
@@ -130,8 +132,10 @@ fun MainActivityScreen() {
     val secondArticleLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.StartActivityForResult(),
     ) { result ->
-        secondArticleRead = result.data?.getBooleanExtra(SecondActivity.READ_EXTRA, secondArticleRead)
-            ?: secondArticleRead
+        if (result.resultCode == RESULT_OK) {
+            secondArticleRead = result.data?.getBooleanExtra(SecondActivity.READ_EXTRA, secondArticleRead)
+                ?: secondArticleRead
+        }
     }
 
     DroidPractice1Theme {
@@ -152,7 +156,10 @@ fun MainActivityScreen() {
                 onDislike = { dislikes++ },
                 onShare = { shareArticle(context, selectedArticle) },
                 onOpenSecondArticle = {
-                    secondArticleLauncher.launch(Intent(context, SecondActivity::class.java))
+                    secondArticleLauncher.launch(
+                        Intent(context, SecondActivity::class.java)
+                            .putExtra(SecondActivity.READ_EXTRA, secondArticleRead),
+                    )
                 },
             )
         }
@@ -173,18 +180,18 @@ private fun NewsHome(
                         Text(stringResource(R.string.article_title), fontWeight = FontWeight.SemiBold)
                         Text(
                             stringResource(R.string.article_subtitle),
-                            color = Color(0xFFFF3D67),
+                            color = colorResource(R.color.news_pink),
                             fontSize = 11.sp,
                         )
                     }
                 },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color(0xFFF1F1F3),
+                    containerColor = colorResource(R.color.news_toolbar),
                 ),
             )
         },
         bottomBar = { NewsNavigationBar() },
-        containerColor = Color(0xFFF7F7F9),
+        containerColor = colorResource(R.color.news_background),
     ) { padding ->
         LazyColumn(
             modifier = Modifier.fillMaxSize().padding(padding),
@@ -229,13 +236,13 @@ private fun NewsCard(article: NewsArticle, isRead: Boolean, onClick: () -> Unit)
             Column(modifier = Modifier.padding(14.dp)) {
                 Text(
                     article.preview,
-                    color = Color(0xFF3E3E43),
+                    color = colorResource(R.color.news_preview),
                     fontWeight = FontWeight.SemiBold,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                 )
                 if (isRead) {
-                    Text("Прочитано", color = Color(0xFFFF3D67), fontSize = 12.sp, modifier = Modifier.padding(top = 6.dp))
+                    Text("Прочитано", color = colorResource(R.color.news_pink), fontSize = 12.sp, modifier = Modifier.padding(top = 6.dp))
                 }
             }
         }
@@ -259,14 +266,14 @@ private fun ArticlePage(
         topBar = {
             CenterAlignedTopAppBar(
                 navigationIcon = {
-                    TextButton(onClick = onBack) { Text("‹", fontSize = 32.sp, color = Color(0xFFFF3D67)) }
+                    TextButton(onClick = onBack) { Text("‹", fontSize = 32.sp, color = colorResource(R.color.news_pink)) }
                 },
                 title = { Text(article.title, maxLines = 2, fontSize = 18.sp, lineHeight = 21.sp) },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = Color(0xFFF1F1F3)),
+                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = colorResource(R.color.news_toolbar)),
             )
         },
         bottomBar = { NewsNavigationBar() },
-        containerColor = Color(0xFFF7F7F9),
+        containerColor = colorResource(R.color.news_background),
     ) { padding ->
         Column(
             modifier = Modifier.fillMaxSize().padding(padding).verticalScroll(rememberScrollState()).padding(horizontal = 16.dp, vertical = 14.dp),
@@ -291,15 +298,15 @@ private fun ArticlePage(
                 if (index == 1 && article.quote != null) {
                     Text(
                         article.quote,
-                        color = Color(0xFF55555C),
+                        color = colorResource(R.color.news_quote_text),
                         fontStyle = FontStyle.Italic,
                         lineHeight = 21.sp,
                         modifier = Modifier.padding(start = 10.dp, bottom = 12.dp).clip(RoundedCornerShape(12.dp))
-                            .background(Color(0xFFFFE8EE)).padding(12.dp),
+                            .background(colorResource(R.color.news_quote_background)).padding(12.dp),
                     )
                 }
             }
-            HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp), color = Color(0xFFE0E0E4))
+            HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp), color = colorResource(R.color.news_divider))
             Row(
                 modifier = Modifier.fillMaxWidth().padding(vertical = 10.dp),
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
@@ -310,18 +317,18 @@ private fun ArticlePage(
             Button(
                 onClick = onShare,
                 modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFF3D67)),
+                colors = ButtonDefaults.buttonColors(containerColor = colorResource(R.color.news_pink)),
             ) { Text(stringResource(R.string.share_article)) }
             if (article.id == "millionaire") {
                 Button(
                     onClick = onOpenSecondArticle,
                     modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2F2F35)),
+                    colors = ButtonDefaults.buttonColors(containerColor = colorResource(R.color.news_button_dark)),
                 ) { Text(stringResource(R.string.open_second_article)) }
                 if (secondArticleRead) {
                     Text(
                         "Вторая статья прочитана",
-                        color = Color(0xFFFF3D67),
+                        color = colorResource(R.color.news_pink),
                         fontWeight = FontWeight.SemiBold,
                         modifier = Modifier.align(Alignment.CenterHorizontally).padding(top = 8.dp, bottom = 8.dp),
                     )

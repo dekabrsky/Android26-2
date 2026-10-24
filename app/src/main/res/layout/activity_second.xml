@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFF1F1F3"
+        android:background="@color/news_toolbar"
         android:title="@string/second_article_title"
         android:titleTextColor="@color/news_text"
         app:navigationIcon="@drawable/arrow_back" />
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="@string/second_article_date"
-                android:textColor="#77777E"
+                android:textColor="@color/news_date"
                 android:textSize="12sp" />
 
             <TextView
@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="Большие перемены начинаются с маленьких шагов. В университете запускается серия встреч, где студенты смогут обсудить идеи для учёбы, проектов и первых стартапов."
+                android:text="@string/second_article_lead"
                 android:textColor="@color/news_text"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:lineSpacingExtra="4dp"
-                android:text="Каждая встреча — это возможность познакомиться с единомышленниками, задать вопросы наставникам и попробовать превратить задумку в понятный план.&#10;&#10;Организаторы уверены: спокойный темп и поддержка команды помогают не бояться ошибок и двигаться вперед."
+                android:text="@string/second_article_body"
                 android:textColor="@color/news_text"
                 android:textSize="16sp" />
 
@@ -82,10 +82,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
-                android:background="#FFFFE8EE"
+                android:background="@color/news_quote_background"
                 android:padding="14dp"
-                android:text="❝ Иногда самый важный результат — просто сделать первый шаг. ❞"
-                android:textColor="#FF55555C"
+                android:text="@string/second_article_quote"
+                android:textColor="@color/news_quote_text"
                 android:textSize="16sp"
                 android:textStyle="italic" />
 
@@ -98,7 +98,7 @@
                 android:textColor="@color/news_text"
                 android:textSize="17sp"
                 app:thumbTint="@color/news_pink"
-                app:trackTint="#FFFFC1CF" />
+                app:trackTint="@color/news_switch_track" />
 
             <Button
                 android:id="@+id/back_button"

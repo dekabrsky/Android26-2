@@ -11,7 +11,6 @@ class SecondActivity : ComponentActivity() {
 
     private lateinit var binding: ActivitySecondBinding
     private val tag = "SecondActivity"
-    private val preferences by lazy { getSharedPreferences("news_state", MODE_PRIVATE) }
 
     companion object {
         const val READ_EXTRA = "second_article_read"
@@ -24,10 +23,8 @@ class SecondActivity : ComponentActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.readSwitch.isChecked = preferences.getBoolean(READ_EXTRA, false)
-        binding.readSwitch.setOnCheckedChangeListener { _, checked ->
-            preferences.edit().putBoolean(READ_EXTRA, checked).apply()
-        }
+        binding.readSwitch.isChecked = savedInstanceState?.getBoolean(READ_EXTRA)
+            ?: intent.getBooleanExtra(READ_EXTRA, false)
         binding.toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
         binding.backButton.setOnClickListener { onBackPressedDispatcher.onBackPressed() }
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
@@ -35,6 +32,11 @@ class SecondActivity : ComponentActivity() {
                 finishWithResult()
             }
         })
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putBoolean(READ_EXTRA, binding.readSwitch.isChecked)
+        super.onSaveInstanceState(outState)
     }
 
     override fun onStart() {
