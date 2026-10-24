@@ -1,4 +1,14 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="app_name">Новости УрФУ</string>
+    <string name="article_title">Новости</string>
+    <string name="article_subtitle">просмотр актуальных новостей</string>
+    <string name="second_article_title">Маленькие шаги в будущее</string>
+    <string name="second_article_date">21.12.25</string>
+    <string name="second_article_lead">Большие перемены начинаются с маленьких шагов. В университете запускается серия встреч, где студенты смогут обсудить идеи для учёбы, проектов и первых стартапов.</string>
+    <string name="second_article_body">Каждая встреча — это возможность познакомиться с единомышленниками, задать вопросы наставникам и попробовать превратить задумку в понятный план.\n\nОрганизаторы уверены: спокойный темп и поддержка команды помогают не бояться ошибок и двигаться вперед.</string>
+    <string name="second_article_quote">❝ Иногда самый важный результат — просто сделать первый шаг. ❞</string>
+    <string name="share_article">Поделиться статьёй</string>
+    <string name="open_second_article">Открыть другую статью</string>
+    <string name="read_article">Прочитано</string>
+    <string name="back_to_news">Вернуться к новостям</string>
 </resources>
