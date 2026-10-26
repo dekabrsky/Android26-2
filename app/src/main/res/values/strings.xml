@@ -1,4 +1,29 @@
 <resources>
-    <string name="app_name">DroidPractice1</string>
+    <string name="app_name">RUDAKOV</string>
     <string name="article_title">Статья</string>
+
+    <!-- Статья 1 (Compose) -->
+    <string name="article_1_title">Первый полет человека в космос: Подвиг Гагарина</string>
+    <string name="article_1_text_part_1">12 апреля 1961 года в 09:07 по московскому времени с космодрома Байконур состоялся запуск ракеты-носителя «Восток».</string>
+    <string name="article_1_quote">«Поехали!» — знаменитая фраза, произнесенная Юрием Гагариным во время старта.</string>
+    <string name="article_1_text_part_2">Корабль «Восток-1» совершил один виток вокруг Земли и через 108 минут успешно приземлился в Саратовской области. Этот момент разделил историю человечества на «до» и «после», открыв нам путь к звездам.</string>
+    <string name="article_1_highlight">Мировое признание: Гагарин стал самым известным человеком планеты.</string>
+
+    <string name="btn_share">Поделиться</string>
+    <string name="btn_next_article">Перейти к следующей статье</string>
+    <string name="likes_count">Лайков: %1$d</string>
+    <string name="dislikes_count">Дизлайков: %1$d</string>
+    <string name="second_article_read_status">Вторая статья прочитана: %1$s</string>
+    <string name="status_yes">Да</string>
+    <string name="status_no">Нет</string>
+
+    <!-- Статья 2 (XML) -->
+    <string name="article_2_title">Секреты подготовки космонавтов: Путь к звездам</string>
+    <string name="article_2_text_1">Подготовка будущих покорителей космоса — это не просто тренировки, это проверка пределов человеческих возможностей.</string>
+    <string name="article_2_quote">«В космосе нет места слабости. Только дисциплина и бесконечный труд.»</string>
+    <string name="article_2_text_2">Кандидаты проходят через жесткое сито отбора. Ключевой этап — работа в центрифуге. Космонавты испытывают перегрузки до 8–10 g, когда вес тела увеличивается в десять раз, а дыхание становится почти невозможным.</string>
+    <string name="article_2_subtitle_hydro">Гидролаборатория и невесомость</string>
+    <string name="article_2_text_3">Чтобы имитировать работу в открытом космосе, используются огромные бассейны. В них космонавты в тяжелых скафандрах часами отрабатывают ремонтные операции, находясь в состоянии гидроневесомости.</string>
+
+    <string name="switch_read_title">Прочитано</string>
 </resources>
