@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">DroidPractice1</string>
-    <string name="article_title">Статья</string>
+    <string name="article_title">Главная статья</string>
+    <string name="article_text">Мне действительно понравилась его роль в третьей части.
+        Мне понравилось, что он показал раз и навсегда, насколько на самом деле фальшива идея "семьи" у Миддлов.
+        Тот факт, что он хотел убить Араю за то, что она отняла у него Ёсикиде.
+        Или то, что он пытался бы убить свою собственную чертову дочь, просто чтобы выиграть бой</string>
+    <string name="article_subtitle">Подзаголовок статьи</string>
+    <string name="share_article">Поделиться</string>
+    <string name="next_article">Следующая статья</string>
+    <string name="article_score">Рейтинг: %1$d</string>
+    <string name="second_article_title">Вторая статья</string>
+    <string name="second_article_text">Я видел этот же символ этажа Нецаха на третьем этаже магазина, есть мысли?
+        Я не могу получить другое изображение, потому что оно сейчас на моем ПК.
+        Также только что понял, что с символом можно взаимодействовать.</string>
+    <string name="read_switch">Прочитано</string>
+    <string name="article_read_status">Статья прочитана!</string>
+    <string name="second_article_subtitle">Дополнительная информация о статье</string>
 </resources>
