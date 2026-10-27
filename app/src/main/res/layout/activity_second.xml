@@ -12,7 +12,113 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:navigationIcon="@drawable/arrow_back"
+        android:title="@string/article_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingBottom="10dp"
+                android:text="@string/introduction"
+                android:textSize="@dimen/text_size_introduction" />
+
+            <TextView
+                android:id="@+id/Achichi_Mela_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingBottom="10dp"
+                android:text="@string/Achichi_Mela"
+                android:textSize="@dimen/text_size_body" />
+
+            <ImageView
+                android:id="@+id/Achichi_Mela_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:paddingBottom="25dp" />
+
+            <TextView
+                android:id="@+id/Sorashina_Sopia_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingBottom="10dp"
+                android:text="@string/Sorashina_Sopia"
+                android:textSize="@dimen/text_size_body" />
+
+            <ImageView
+                android:id="@+id/Sorashina_Sopia_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:paddingBottom="25dp" />
+
+            <TextView
+                android:id="@+id/Suzuna_Tsuzuri_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingBottom="10dp"
+                android:text="@string/Suzuna_Tsuzuri"
+                android:textSize="@dimen/text_size_body" />
+
+            <ImageView
+                android:id="@+id/Suzuna_Tsuzuri_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:paddingBottom="25dp" />
+
+            <TextView
+                android:id="@+id/Hyakuto_Kyoko_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingBottom="10dp"
+                android:text="@string/Hyakuto_Kyoko"
+                android:textSize="@dimen/text_size_body" />
+
+            <ImageView
+                android:id="@+id/Hyakuto_Kyoko_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:paddingBottom="25dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchRead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/switch_read" />
+
+                <Button
+                    android:id="@+id/buttonShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:backgroundTint="@color/violet"
+                    android:text="@string/share"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
