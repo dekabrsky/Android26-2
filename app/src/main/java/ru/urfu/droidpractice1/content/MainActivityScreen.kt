@@ -103,13 +103,13 @@ fun MainActivityScreen() {
         mutableStateOf(0)
     }
 
-    var isRead by remember { mutableStateOf(false) }
+    var isRead by rememberSaveable { mutableStateOf(false) }
 
     val launcher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.StartActivityForResult(),
     ) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
-            isRead = result.data?.getBooleanExtra("is_read", false) ?: false
+            isRead = result.data?.getBooleanExtra(SecondActivity.EXTRA_IS_READ, false) ?: false
         }
     }
 
@@ -201,7 +201,7 @@ fun MainActivityScreen() {
                         isRead = isRead,
                         onClick = {
                             val intent = Intent(context, SecondActivity::class.java).apply {
-                                putExtra("is_read", isRead)
+                                putExtra(SecondActivity.EXTRA_IS_READ, isRead)
                             }
                             launcher.launch(intent)
                         }
