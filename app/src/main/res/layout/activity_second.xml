@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".SecondActivity">
 
@@ -12,7 +12,170 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/article_title"
-        android:navigationIcon="@drawable/arrow_back" />
+        android:navigationIcon="@drawable/arrow_back"
+        android:title="@string/article_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- Рубрика прижата вправо -->
+            <TextView
+                style="@style/ArticleCategory"
+                android:text="@string/second_category" />
+
+            <!-- Заголовок по центру, засечками -->
+            <TextView
+                style="@style/ArticleTitle"
+                android:text="@string/second_title" />
+
+            <TextView
+                style="@style/ArticleSubtitle"
+                android:text="@string/second_subtitle" />
+
+            <ImageView
+                android:id="@+id/article_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/second_image_caption"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/image_placeholder" />
+
+            <TextView
+                style="@style/ArticleImageCaption"
+                android:text="@string/second_image_caption" />
+
+            <!-- Лид: полужирный шрифт и увеличенный межстрочный интервал -->
+            <TextView
+                style="@style/ArticleLead"
+                android:text="@string/second_lead" />
+
+            <TextView
+                style="@style/ArticleHeading"
+                android:text="@string/second_heading_1" />
+
+            <TextView
+                style="@style/ArticleParagraph"
+                android:text="@string/second_paragraph_1" />
+
+            <!-- Цитата: цветная полоса слева + фон -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_quote"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/mars" />
+
+                <TextView
+                    style="@style/ArticleQuote"
+                    android:text="@string/second_quote" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/ArticleHeading"
+                android:text="@string/second_heading_2" />
+
+            <TextView
+                style="@style/ArticleParagraph"
+                android:text="@string/second_paragraph_2" />
+
+            <!-- Цифры статьи: три равные колонки -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <LinearLayout style="@style/ArticleStat">
+
+                    <TextView
+                        style="@style/ArticleStatValue"
+                        android:text="@string/second_stat_1_value" />
+
+                    <TextView
+                        style="@style/ArticleStatLabel"
+                        android:text="@string/second_stat_1_label" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ArticleStat">
+
+                    <TextView
+                        style="@style/ArticleStatValue"
+                        android:text="@string/second_stat_2_value" />
+
+                    <TextView
+                        style="@style/ArticleStatLabel"
+                        android:text="@string/second_stat_2_label" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ArticleStat">
+
+                    <TextView
+                        style="@style/ArticleStatValue"
+                        android:text="@string/second_stat_3_value" />
+
+                    <TextView
+                        style="@style/ArticleStatLabel"
+                        android:text="@string/second_stat_3_label" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/ArticleParagraph"
+                android:text="@string/second_paragraph_3" />
+
+            <TextView
+                style="@style/ArticleSignature"
+                android:text="@string/second_signature" />
+
+            <!-- Переключатель «Прочитано» -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_read_panel"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ReadPanelTitle"
+                        android:text="@string/mark_as_read" />
+
+                    <TextView
+                        style="@style/ReadPanelHint"
+                        android:text="@string/mark_as_read_hint" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/read_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:contentDescription="@string/mark_as_read" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
